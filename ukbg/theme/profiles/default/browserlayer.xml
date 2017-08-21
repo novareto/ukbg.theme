@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<layers>
+
+  <layer name="ukbg.theme" interface="ukbg.theme.interfaces.IThemeSpecific"/>
+
+</layers>

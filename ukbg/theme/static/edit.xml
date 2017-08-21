@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+         xmlns:css="http://namespaces.plone.org/diazo/css"
+         xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+         xmlns:xi="http://www.w3.org/2001/XInclude">
+
+  <drop css:content="#edit-bar h5"/>
+
+  <replace css:content="#content-views">
+      <ul class="nav nav-tabs">
+          <xsl:apply-templates select="./*"/>
+      </ul>
+  </replace>
+
+  <drop css:content=".contentActions .arrowDownAlternative"/>
+
+  <replace css:content=".actionSeparator">
+      <li class="nav-header">
+          <xsl:apply-templates select="./div/*"/>
+      </li>
+      <li class="divider"></li>
+  </replace>
+
+  <replace css:content="#edit-bar > .contentActions">
+      <div class="clearfix">
+          <div class="btn-toolbar pull-right">
+          <xsl:for-each select="./ul/li">
+            <div class="btn-group">
+                <button class="btn">
+                    <xsl:apply-templates select=".//dt/a/span"/>
+                </button>
+                <button class="btn dropdown-toggle" data-toggle="dropdown">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <xsl:apply-templates select=".//dd/ul/li"/>
+                </ul>
+            </div>
+          </xsl:for-each>
+          </div>
+      </div>
+  </replace>
+
+</rules>

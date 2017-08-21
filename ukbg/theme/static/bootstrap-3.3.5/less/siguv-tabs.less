@@ -1,0 +1,72 @@
+#uvc-tabs > ul {
+  background-color: #FBFBFB;
+    background-image: -moz-linear-gradient(center top, #ffffff, #f5f5f5);
+      border: 1px solid #DDDDDD;
+}
+
+.navTabs .nav-tabs {
+  background:@blueLighter;
+}
+.navTabs .nav-tabs > li {
+  margin-left: 0px !important;
+  padding-bottom: 0px !important;
+}
+.navTabs .nav-tabs > li > a {
+  background:@blueLighter;
+  border-radius:0;
+  border:0;
+  border-right:1px solid white;
+  margin-right: 0px;
+}
+.navTabs .nav-tabs > .active > a {
+  background:@white;
+  color: @font;
+  font-weight: bold;
+  border-right: 0 !important;
+  border-left: 0 !important;
+  border-top: 0 !important;
+}
+
+/* Default mode */
+.tabbable-panel {margin-top:15px;}
+.tabbable-line > .nav-tabs {
+  border: 1px solid @blueLighter;
+  margin: 0px;
+}
+.tabbable-line > .nav-tabs > li {
+  margin-right: 2px;
+}
+.tabbable-line > .nav-tabs > li > a {
+  border: 0;
+  margin-right: 0;
+  color: @font;
+  text-decoration:none !important;
+}
+.tabbable-line > .nav-tabs > li > a > i {
+  color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+  border-bottom: 4px solid @red;
+}
+.tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+  border: 0;
+  background: none !important;
+  color: #333333;
+}
+.tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+  color: #a6a6a6;
+}
+.tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+  margin-top: 0px;
+}
+.tabbable-line > .nav-tabs > li.active {
+  border-bottom: 4px solid @red;
+  position: relative;
+}
+.tabbable-line > .nav-tabs > li.active > a {
+  border: 0;
+  color: #333333;
+}
+.tabbable-line > .nav-tabs > li.active > a > i {
+  color: #404040;
+}

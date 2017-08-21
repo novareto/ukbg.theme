@@ -1,0 +1,393 @@
+#content-core { 
+	p~ul {overflow:hidden;}
+	dd {padding-bottom: 4px;font-family: "DGUVMetaWeb-Normal";}
+	ol {padding-left:18px;font-family: "DGUVMetaWeb-Normal";}
+	ul {
+	list-style-type:none;
+	padding-left:0;
+	li {
+		text-indent: -18px;
+    		padding-left: 18px;
+        padding-bottom: 4px;
+	}
+	li:before {
+		content:"•";
+		font-size:14px;
+		color:@blue;
+		padding-right:12px;
+	}
+	> ul, > ul > ul {padding-left:22px;}
+	}
+}
+#content-core ul.navTreeLevel0 li:before {content:initial;}
+	
+.download-link {
+		display:inline-block;
+		font:normal normal normal 14px/1 FontAwesome;
+		color:@blue;
+		font-size:inherit;
+		text-rendering:auto;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+		text-indent: -18px;
+    		padding-left: 22px;
+    		line-height: inherit;
+	}
+.discreet {font-family: "DGUVMetaWeb-Normal";}
+.relatedItems {
+	dt {margin-top: 20px;}
+	dd {margin-bottom:4px;
+	a {font-family: "DGUVMetaWeb-Normal";}
+	}
+	.contenttype-formfolder,
+	.contenttype-image,
+	.contenttype-folder,
+	.contenttype-file,
+	.contenttype-rtinternalvideo {
+		display:inline-block;
+		font:normal normal normal 14px/1 FontAwesome;
+		color:@blue;
+		font-size:inherit;
+		text-rendering:auto;
+		-webkit-font-smoothing:antialiased;
+		-moz-osx-font-smoothing:grayscale;
+		text-indent: -18px;
+    		padding-left: 22px;
+    		line-height: inherit;
+			img {display:none;}
+	}
+}
+a.download-link:before {
+	content: "\f1c1";
+	padding-right:6px;
+}
+.relatedItems .contenttype-formfolder:before {
+	content:"–";
+	padding-right:6px;
+}
+.relatedItems .contenttype-file:before {
+	content:"\f15b";
+	padding-right:2px;
+}
+
+.relatedItems .contenttype-image:before {
+	content:"–";
+	padding-right:6px;
+}
+.relatedItems .contenttype-document:before,
+.relatedItems .contenttype-folder:before {
+	content:"–";
+	padding-right:6px;
+}
+.relatedItems .contenttype-rtinternalvideo:before {
+	content:"–";
+	padding-right:6px;
+}
+.iCal-link {white-space: nowrap;}
+.socialmedia {
+		a.social-icon {
+		font-size:44px; 
+		color:@blue;
+		}
+		:hover {color:@bluehover;}
+		margin:10px;
+}
+@media (max-width:1200px) {
+	.socialmedia {
+		a.social-icon {
+		font-size:28px; 
+		}
+	}
+}
+// Sprite
+
+// Document Files
+a[href$='.pdf'].internal-link,
+a[href$='.PDF'].internal-link,
+a[href$='.CSV'].internal-link,
+a[href$='.csv'].internal-link,
+a[href$='.DOC'].internal-link,
+a[href$='.doc'].internal-link,
+a[href$='.DOCX'].internal-link,
+a[href$='.docx'].internal-link,
+a[href$='.TXT'].internal-link,
+a[href$='.txt'].internal-link,
+a[href$='.PPT'].internal-link,
+a[href$='.ppt'].internal-link,
+a[href$='.PPTX'].internal-link,
+a[href$='.pptx'].internal-link,
+a[href$='.RTF'].internal-link,
+a[href$='.rtf'].internal-link,
+a[href$='.ODT'].internal-link,
+a[href$='.odt'].internal-link,
+a[href$='.xlsx'].internal-link,
+a[href$='.XLSX'].internal-link,
+a[href$='.zip'].internal-link,
+a[href$='.ZIP'].internal-link,
+a[href$='.xml'].internal-link,
+a[href$='.XML'].internal-link {
+	background: url(../../../assets/img/sprites.png) no-repeat;
+}
+
+// Audio Files
+a[href$='.aif'].internal-link,
+a[href$='.AIF'].internal-link,
+a[href$='.iff'].internal-link,
+a[href$='.IFF'].internal-link,
+a[href$='.m3u'].internal-link,
+a[href$='.M3U'].internal-link,
+a[href$='.m4a'].internal-link,
+a[href$='.M4A'].internal-link,
+a[href$='.mid'].internal-link,
+a[href$='.MID'].internal-link,
+a[href$='.mp3'].internal-link,
+a[href$='.MP3'].internal-link,
+a[href$='.mpa'].internal-link,
+a[href$='.MPA'].internal-link,
+a[href$='.ra'].internal-link,
+a[href$='.RA'].internal-link,
+a[href$='.wav'].internal-link,
+a[href$='.WAV'].internal-link,
+a[href$='.wma'].internal-link,
+a[href$='.WMA'].internal-link {
+	background: url(../../../assets/img/sprites.png) no-repeat;
+}
+
+// Video Files
+a[href$='.m4v'].internal-link,
+a[href$='.M4V'].internal-link,
+a[href$='.mov'].internal-link,
+a[href$='.MOV'].internal-link,
+a[href$='.mp4'].internal-link,
+a[href$='.MP4'].internal-link,
+a[href$='.mpg'].internal-link,
+a[href$='.MPG'].internal-link {
+	background: url(../../../assets/img/sprites.png) no-repeat;
+}
+a[href$='.pdf'].internal-link,
+a[href$='.PDF'].internal-link,
+a[href$='.CSV'].internal-link,
+a[href$='.csv'].internal-link,
+a[href$='.DOC'].internal-link,
+a[href$='.doc'].internal-link,
+a[href$='.DOCX'].internal-link,
+a[href$='.docx'].internal-link,
+a[href$='.TXT'].internal-link,
+a[href$='.txt'].internal-link,
+a[href$='.PPT'].internal-link,
+a[href$='.ppt'].internal-link,
+a[href$='.PPTX'].internal-link,
+a[href$='.pptx'].internal-link,
+a[href$='.RTF'].internal-link,
+a[href$='.rtf'].internal-link,
+a[href$='.ODT'].internal-link,
+a[href$='.odt'].internal-link,
+a[href$='.xlsx'].internal-link,
+a[href$='.XLSX'].internal-link,
+a[href$='.zip'].internal-link,
+a[href$='.ZIP'].internal-link,
+a[href$='.xml'].internal-link,
+a[href$='.XML'].internal-link,
+a[href$='.aif'].internal-link,
+a[href$='.AIF'].internal-link,
+a[href$='.iff'].internal-link,
+a[href$='.IFF'].internal-link,
+a[href$='.m3u'].internal-link,
+a[href$='.M3U'].internal-link,
+a[href$='.m4a'].internal-link,
+a[href$='.M4A'].internal-link,
+a[href$='.mid'].internal-link,
+a[href$='.MID'].internal-link,
+a[href$='.mp3'].internal-link,
+a[href$='.MP3'].internal-link,
+a[href$='.mpa'].internal-link,
+a[href$='.MPA'].internal-link,
+a[href$='.ra'].internal-link,
+a[href$='.RA'].internal-link,
+a[href$='.wav'].internal-link,
+a[href$='.WAV'].internal-link,
+a[href$='.wma'].internal-link,
+a[href$='.WMA'].internal-link,
+a[href$='.m4v'].internal-link,
+a[href$='.M4V'].internal-link,
+a[href$='.mov'].internal-link,
+a[href$='.MOV'].internal-link,
+a[href$='.mp4'].internal-link,
+a[href$='.MP4'].internal-link,
+a[href$='.mpg'].internal-link,
+a[href$='.MPG'].internal-link {
+        background-position: -16px -795px ;
+        padding: 0 16px 0px;
+}
+
+.Flg-text h4:after,
+.portletRss > divi a.tile, .rss, #document-action-sendto, #document-action-contact, #document-action-print, .arrowdown, .arrowdownSmall, .arrowrightSmall, .link-Icons,
+#document-action-paragraph,
+#document-action-rss,
+#document-action-webcode,
+.link-up,
+div.overlaybg div.close, 
+div.overlay div.close, 
+.tileFooter a,
+.tileFooter span,
+.pfeilmehr, 
+.searchField,
+a.external-link,
+a.internal-link,
+.portletItem a.tile,
+a.event-link,
+a.event-more,
+.lupegrau, 
+.lupeblau,
+a.top:after {
+	background: url(../../../assets/img/sprites.png) no-repeat;
+}
+
+.portletNews a:after {
+	background:url(../../../assets/img/sprites.png) -20px -318px no-repeat;
+	}
+
+.table-menu-btn {
+	background: url(../../../assets/img/sprites.png) no-repeat -18px -365px;
+}
+
+.box a {
+    background: url(../../../assets/img/sprites.png) no-repeat -6px -926px;
+}
+
+.accordion .accordion-toggle.active {
+  	background: url(../../../assets/img/sprites.png) right -928px no-repeat;
+}
+.accordion .accordion-toggle,
+.accordion .accordion-toggle.collapsed {
+	background: url(../../../assets/img/sprites.png) right -1007px no-repeat;
+}
+
+@media (max-width: 979px) {
+	.portlet-left span.portletTopRight {
+        background: url(../../../assets/img/sprites.png) no-repeat;
+	} 
+}
+
+a.top:after {
+        content:"";
+        width:16px;
+        height:16px;
+        background-position: -18px -819px ;
+        padding:0 16px 0 0;
+        }
+.rss{
+        background-position: -12px -461px ;
+        width: 24px;
+        height: 24px;
+}
+
+#document-action-rss{
+        background-position: -13px -673px ;
+}
+#document-action-sendto{
+        background-position: -13px -644px ;
+}
+
+#document-action-webcode{
+        background-position: -13px -757px ;
+}
+#document-action-paragraph {
+  background-position: -13px -1062px;
+}
+#document-action-contact{
+        background-position: -13px -700px ;
+}
+
+#document-action-print {
+        background-position: -13px -729px ;
+}
+
+.arrowdown{
+        background-position: -16px -364px ;
+        width: 24px;
+        height: 24px;
+}
+a.event-more,
+a.event-link,
+a.internal-link,
+.link-Icons{
+        background-position: -20px -318px ;
+        width: 24px;
+        height: 24px;
+}
+
+a.event-link,
+a.internal-link {
+        padding-left:12px;
+        }
+a.external-link,
+.link-up {
+        background-position: -20px -215px ;
+        width: 24px;
+        height: 24px;
+        padding-left:12px;
+}
+a.internal-link img {
+        background:none !important;
+        }
+.tileFooter a,
+.tileFooter span {
+        color:@blue;
+        background-position: right -412px;
+        float: right;
+        clear: both;
+        padding: 0 30px 5px 0;
+        }
+.pfeilmehr{
+        background-position: -14px -412px ;
+        width: 24px;
+        height: 24px;
+        float:right;
+        clear:both;
+}
+.lupegrau {
+        background-position: -11px -12px ;
+        width: 24px;
+        height: 24px;
+        padding: 0 10px 2px;
+        cursor: pointer;
+        float: right;
+}
+.searchField,
+.lupeblau {
+        background-position: right -508px ;
+        padding: 0 10px 2px;
+}
+.arrowdownSmall {
+        background-position: -20px -544px;
+        width: 24px;
+        height: 24px;
+        padding: 0 16px 0px;
+}
+.arrowrightSmall {
+        background-position: -20px -581px;
+        width: 24px;
+        height: 24px;
+        padding: 0 16px 0px;
+}
+#document-action-paragraph,
+#document-action-rss,
+#document-action-sendto,
+#document-action-webcode,
+#document-action-contact,
+#document-action-print {
+        padding-left:@icon-padding;
+}
+
+li.listItem {
+   margin-left: 20px;
+    text-indent: -19px;
+	a {color:@white !important;}
+	a:before {
+                padding-right: 8px;
+                font-family: 'FontAwesome';
+                font-size: 14px;
+                content: "\f0da";
+        }
+}

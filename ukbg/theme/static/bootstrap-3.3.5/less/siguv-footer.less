@@ -1,0 +1,80 @@
+@media (min-width: 768px) {
+	.myfooter {margin-top:40px !important;}
+}
+@media (max-width: 768px) {
+	.footer-wrapper .col-md-6 {
+	padding-left:0;
+	padding-right:0;
+	} 
+	.container {
+		padding:0 !important;
+	}
+}
+.footer-wrapper {background:@blueLighter;}
+.documentActions ul,
+.footer ul {
+        display:inline;
+        list-style-type: none;
+ 	padding:10px 0 0 0;
+        }
+.documentActions ul li,
+.footer ul li {
+        display:inline;
+        line-height:@line-height-computed;
+        }
+.footer li a{
+      color:@footer-font;
+      font-size:@font-size-small;
+      }
+@media (max-width: 460px) {
+         .footer-wrapper {
+    		margin-left: 0px !important;
+	}
+}
+@media (max-width: 767px) {
+         .footer {
+	margin-left:0px !important;
+	margin-right:0px !important;
+	   }
+	   }
+@media (max-width: 979px) {
+         .footer {
+        background:@blue;
+	min-height:90px;   
+	padding:10px 0;
+	margin-left:-3px;
+	margin-right:-3px;
+	   }
+    .footer li a{
+      color:@white;
+      font-size: 14px;
+      }
+    .footer ul {
+      margin-bottom:0;
+      }
+    .footer ul li {
+      padding: 0 10px;
+          display: block;
+    clear: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+      }
+}
+
+// my footer styles
+
+.myfooter {
+	border-top:1px solid white;
+	background:@blue;
+	margin-top:0px;
+	padding-top:20px;
+	padding-bottom:20px;
+	.footer-group {padding:0 10px;}
+	li.footerItem a:before {
+		padding-right: 8px;
+    		font-family: 'FontAwesome';
+    		font-size: 14px;
+    		content: "\f0da";
+	}
+	li.footerItem a:before, h4, a, li, p {color:@white}
+}

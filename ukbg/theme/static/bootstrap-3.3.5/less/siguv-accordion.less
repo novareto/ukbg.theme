@@ -1,0 +1,62 @@
+#accordion {
+
+    h4 > a {
+
+        display: block;
+
+        &[aria-expanded]:after {
+            font-family: FontAwesome;
+            font-size: 70%;
+            float: right;
+        }
+
+        &[aria-expanded="false"]:after {
+            content: " \f054";
+        }
+
+        &[aria-expanded="true"]:after {
+            content: " \f078";
+        }
+
+    }
+
+}
+
+// template LB
+ul.nav-bullet li { list-style: none; display: inline;}
+ul.nav-bullet li:before { content: "\2022";color:@blue;font-size: 26px; vertical-align: bottom; }
+ul.nav-bullet li:last-child:after { content: none; }
+ul.nav-bullet li a {text-decoration:underline; padding-left:3px;padding-right:6px;}
+.accordion-group {
+    border-radius:0;
+    border-color:@blueLighter;
+}
+.accordion .accordion-toggle.active {
+  margin-right: -6px;
+}
+.accordion .accordion-toggle,
+.accordion .accordion-toggle.collapsed {
+  margin-right: -6px;
+}
+
+.accordion-inner > ul {
+        list-style-type: none;
+                margin-left:0;
+}
+.accordion-inner > ul > li {
+        padding-left: 16px !important;
+                text-indent: -11px !important;
+                        margin-left:0 !important;
+}
+.accordion-inner a.internal-link {
+        color:@footer-font !important;
+}
+.accordion-heading {
+        h2 {
+        margin:0;
+        }
+}
+
+.accordion .accordion-toggle.active {
+        font-weight:bold;
+}
