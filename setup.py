@@ -26,7 +26,11 @@ setup(name='ukbg.theme',
       install_requires=[
           'setuptools',
           # -*- Extra requirements: -*-
-          #'z3c.jbot',
+          'z3c.jbot',
+          'diazo==1.0.6',
+          'plone.app.theming==1.3.0',
+          'experimental.cssselect==0.3',
+
       ],
       entry_points="""
       # -*- Entry points: -*-
