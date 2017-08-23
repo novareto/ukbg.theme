@@ -10,7 +10,7 @@
         <prepend theme="html/head" css:content="html head base"/>
 
         <drop css:theme="meta[http-equiv='Content-Type']"/>
-        <drop css:content="meta[name='viewport']"/>
+        <!--<drop css:content="meta[name='viewport']"/>
         <drop css:content="link[href$='public.css']"/>
         <drop css:content="link[href$='columns.css']"/>
         <drop css:content="link[href$='portlets.css']"/>
@@ -22,12 +22,14 @@
         <drop css:content="link[href$='invisibles.css']"/>
         <drop css:content="link[href$='ploneCustom.css']"/>
         <drop css:content="link[href$='tabrtabs.css']"/>
-        <!--drop css:content="link[href$='controlpanel.css']" /-->
+        <drop css:content="link[href$='controlpanel.css']"
         <drop css:content="link[href$='member.css']"/>
         <drop css:content="link[href$='print.css']"/>
         <drop css:content="link[href$='mobile.css']"/>
         <drop css:content="link[href$='reset.css']"/>
-        <drop css:content="link[href$='base.css']"/>
+        <drop css:content="link[href$='base.css']"/>-->
+
+        <drop css:content="link[href$='.css']" />
         <drop css:content="link[href*='base-cachekey']"/>
         <drop css:content="link[href*='reset-cachekey']"/>
         <!-- Head elements -->
@@ -43,11 +45,10 @@
 
         <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="header"/>
         <!-- Header rules -->
-        <replace css:theme-children="#logo" css:content="#portal-logo"/>
+        <!--<replace css:theme-children="#logo" css:content="#portal-logo"/>-->
 
         <!-- Utilities -->
         <replace content="//*[@class='selected']/@class">
-
             <xsl:attribute name="class">active</xsl:attribute>
         </replace>
 
@@ -271,7 +272,7 @@
 
         <!-- Left column -->
         <rules if-content="//*[@id='portal-column-one']">
-            
+
             <replace css:theme="#column1-container">
                 <xsl:variable name="left">
                      <xsl:if test="//*[@id='portal-column-one'] and //*[@id='portal-column-two']">col-xs-12 col-md-3 col-md-pull-6</xsl:if>
