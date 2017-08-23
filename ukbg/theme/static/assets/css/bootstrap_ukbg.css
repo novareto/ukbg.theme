@@ -260,7 +260,7 @@ table {
 caption {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-  color: #868e96;
+  color: #fff;
   text-align: left;
   caption-side: bottom;
 }
@@ -599,8 +599,8 @@ pre code {
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 3px;
+  padding-left: 3px;
   width: 100%;
 }
 
@@ -612,19 +612,19 @@ pre code {
 
 @media (min-width: 768px) {
   .container {
-    max-width: 720px;
+    max-width: 726px;
   }
 }
 
 @media (min-width: 992px) {
   .container {
-    max-width: 960px;
+    max-width: 946px;
   }
 }
 
 @media (min-width: 1200px) {
   .container {
-    max-width: 1140px;
+    max-width: 1146px;
   }
 }
 
@@ -632,8 +632,8 @@ pre code {
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 3px;
+  padding-left: 3px;
   width: 100%;
 }
 
@@ -666,8 +666,8 @@ pre code {
   position: relative;
   width: 100%;
   min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 3px;
+  padding-left: 3px;
 }
 
 .col {
@@ -1337,7 +1337,7 @@ pre code {
 }
 
 .table .table {
-  background-color: #fff;
+  background-color: #transparent;
 }
 
 .table-sm th,
@@ -1550,7 +1550,7 @@ pre code {
 .form-control {
   display: block;
   width: 100%;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5rem 0.1rem;
   font-size: 1rem;
   line-height: 1.25;
   color: #495057;
@@ -1961,7 +1961,7 @@ select.form-control-lg:not([size]):not([multiple]), .input-group-lg > select.for
   padding: 0.5rem 0.75rem;
   font-size: 1rem;
   line-height: 1.25;
-  border-radius: 0.25rem;
+  border-radius: 0;
   transition: all 0.15s ease-in-out;
 }
 
@@ -1989,14 +1989,14 @@ fieldset[disabled] a.btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #004994;
+  border-color: #003c7b;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #003061;
+  border-color: #001e3d;
 }
 
 .btn-primary:focus, .btn-primary.focus {
@@ -2010,9 +2010,9 @@ fieldset[disabled] a.btn {
 
 .btn-primary:active, .btn-primary.active,
 .show > .btn-primary.dropdown-toggle {
-  background-color: #0069d9;
+  background-color: #003061;
   background-image: none;
-  border-color: #0062cc;
+  border-color: #001e3d;
 }
 
 .btn-secondary {
@@ -2445,7 +2445,7 @@ fieldset[disabled] a.btn {
 
 .btn-link {
   font-weight: normal;
-  color: #007bff;
+  color: #004994;
   border-radius: 0;
 }
 
@@ -2463,7 +2463,7 @@ fieldset[disabled] a.btn {
 }
 
 .btn-link:focus, .btn-link:hover {
-  color: #0056b3;
+  color: #002348;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3180,13 +3180,13 @@ tbody.collapse.show {
 }
 
 .nav-tabs .nav-link {
-  border: 1px solid transparent;
+  border: 1px solid #004994;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
 
 .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-  border-color: #e9ecef #e9ecef #ddd;
+  border-color: #004994;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -3215,7 +3215,7 @@ tbody.collapse.show {
 .nav-pills .nav-link.active,
 .show > .nav-pills .nav-link {
   color: #fff;
-  background-color: #007bff;
+  background-color: #004994;
 }
 
 .nav-fill .nav-item {
@@ -5231,11 +5231,11 @@ button.close {
 }
 
 .bg-primary {
-  background-color: #007bff !important;
+  background-color: #004994 !important;
 }
 
 a.bg-primary:focus, a.bg-primary:hover {
-  background-color: #0062cc !important;
+  background-color: #003061 !important;
 }
 
 .bg-secondary {
