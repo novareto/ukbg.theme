@@ -29,7 +29,11 @@
         <drop css:content="link[href$='reset.css']"/>
         <drop css:content="link[href$='base.css']"/>-->
 
-        <drop css:content="link[href$='.css']" />
+        <!--<drop css:content="link[href$='.css']" />-->
+
+        <copy attributes="*" theme="link[href=default.css]"
+              content="link[$='default.css]" />
+
         <drop css:content="link[href*='base-cachekey']"/>
         <drop css:content="link[href*='reset-cachekey']"/>
         <!-- Head elements -->
@@ -39,6 +43,10 @@
         <after css:theme-children="html head" content="/html/head/meta | /html/head/style | /html/head/link"/>
         <!-- Skip Links -->
         <copy attributes="class id dir" content="/html/body" theme="html/body"/>
+
+        <!-- Plone 5 toolbar -->
+        <replace css:theme="#edit-zone" css:content="#edit-zone" />
+
 
         <!-- TEMP RULE -->
         <before css:content="#master-slider-container" css:theme="#main"/>
@@ -128,28 +136,6 @@
                     <xsl:copy-of select="node()"/>
                 </li>
             </xsl:for-each>
-        </replace>
-        <!-- Personal tools -->
-        <append css:content="#portal-personaltools" css:theme="#site-action .navbar"/>
-
-        <replace css:content="dl#portal-personaltools">
-            <ul id="portal-personaltools" class="navbar-right nav">
-                <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-
-                        <xsl:copy-of select="./dt/a/@*[local-name() != 'class']"/>
-
-                        <xsl:apply-templates select="./dt/a/text()"/>
-                        <b class="caret"></b>
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li><xsl:copy-of select="./dt/a"/></li>
-                        <li class="divider"></li>
-
-                        <xsl:apply-templates css:select="li"/>
-                    </ul>
-                </li>
-            </ul>
         </replace>
 
         <!-- Globalnav -->
