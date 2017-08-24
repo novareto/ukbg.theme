@@ -1,0 +1,93 @@
+// portlet-navigation
+#portletNavigation {
+		margin-bottom: 15px;
+        ul {
+                padding-left:4px;
+                }
+        h4      {
+                border-bottom:0;
+        }
+}
+li.navTreeItem {
+        display:block;
+    	text-indent: -16px;
+    	padding:2px 4px 2px 16px;
+        border-top:1px solid $blue;
+        a {color:$gray-dark;
+	}
+}
+
+li.navTreeItem a {
+    display: block;
+    &:before {
+        font-family: 'FontAwesome';
+        content: "\f0da";
+        color:$blue;
+        font-size:$font-size-base;
+        padding-right:8px;
+    }
+}
+
+li.navTreeItem:not(.navTreeItemInPath) a:hover:before {
+        padding-right:5px;
+        content: "\f0d7";
+        font-family: 'FontAwesome';
+}
+li.navTreeItem.navTreeCurrentNode,
+#portletNavigation .portletItem li:hover:not(.navTreeItemInPath) {background:#fff;}
+li.navTreeItem.navTreeCurrentNode > div {display:initial;}
+li.navTreeItem a:hover {
+        color:$blue;
+        text-decoration:none !important;
+        }
+.navTreeCurrentItem {
+        color:$blue !important;
+}
+.navTreeCurrentItem:last-child {
+        border-bottom:0;
+}
+.navTreeLevel0 li.navTreeItem:last-child {
+        border-bottom:1px solid $blue;
+        }
+.navTreeLevel1 li.navTreeItem:last-child,
+.navTreeLevel2 li.navTreeItem:last-child,
+.navTreeLevel3 li.navTreeItem:last-child {
+        border-bottom:0;
+}
+li.navTreeItem a.contenttype-news-item:after {
+        background:none !important;
+}
+// portal-sitemap navigation
+#portal-sitemap {
+        padding-left:0;
+        li > div {display:initial;}
+	li.navTreeItem:hover {background-color:transparent;} 
+	li.navTreeItem a:hover {color:#000 !important;}
+	ul, ul ul {padding-left:0px;}
+}
+
+@media all and (min-width: $screen-md) {
+   .row-offcanvas,
+   .nva-mobilenavigation {
+	display: none;
+   }
+}
+
+#portal-column-offcanvas {
+  background-color: $blueLighter;
+}
+
+.secondary-navigation {
+    margin: 5px 5px 0 0;
+    @media all and (min-width: $screen-md) {
+        display: none;
+    }
+}
+
+#portal-column-one {
+    .nav-stacked {
+        @media all and (max-width: $screen-md) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,68 @@
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+  /*padding-top: 70px;*/
+}
+footer {
+ /*padding: 30px 0;*/
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+.row-offcanvas {z-index:999}
+
+@media screen and (max-width: 991px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: -10px;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -70%; /* 6 columns */
+    background:white;
+    z-index:9299;
+  }
+
+  .row-offcanvas-left:not(.active)
+  .sidebar-offcanvas {
+    left: -100%;
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 70%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 70%; /* 6 columns */
+  }
+}

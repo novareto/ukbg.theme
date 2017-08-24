@@ -1,0 +1,37 @@
+// Ipad in portrait
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+	.container {}
+ }
+
+//mobile site action
+
+#mobile-site-action {
+float:right;
+width:100%;
+position:relative;
+z-index: 32;
+}
+ul.mobile-site-action {
+  margin:0;
+  background:#666;
+  padding: 10px 0;
+  text-align: center;
+}
+#mobile-site-action .plus {
+  background: url(../../../assets/img/sprites.png) -14px -978px no-repeat;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+.mobile-plus {
+  padding: 0px;
+  position:relative;
+}
+.mobile-site-action li {
+  display:inline !important;
+}
+.mobile-site-action a {
+  color:#fff !important;
+  padding:0 5px;
+}

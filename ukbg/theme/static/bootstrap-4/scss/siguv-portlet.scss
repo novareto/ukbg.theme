@@ -1,0 +1,179 @@
+// Portlet
+
+a.event-more {
+        margin-left:5px;
+        line-height:16px;
+        margin-right:5px;
+}
+a.event-start,
+a.event-more,
+a.event-link {
+        color:$font !important;
+}
+a.event-more,
+.event-start,
+a.event-location {
+        padding-left: 11px;
+}
+.portlet-column {clear:both;}
+.nav-list .portletItem li {
+        padding-left: 10px !important;
+        text-indent: -1px !important;
+}
+.portletNews a:after {
+        content:"";
+        width:16px;
+        height:16px;
+        padding:0 16px 0 0;
+        }
+.portletBlueLinePortlet {
+        border:0 !important;
+        background:$blueextranet !important;
+        padding:0 5px;
+        }
+.portletBlueLinePortlet h4 {
+        border-bottom: 0;
+        margin-top:0 !important;
+        padding-left:0 !important;
+        }
+.portletBlueLinePortlet a,
+.portletBlueLinePortlet h4 {
+        color:$white;
+        }
+.portletBlueLinePortlet h4 > span:nth-child(3) {
+        border-bottom: 1px solid $white !important;
+        display:block;
+        margin:0 -5px;
+        }
+.portletBlueLinePortlet h4 > span:nth-child(2) {
+        line-height:2em;
+        }
+.portletBlueLinePortlet .bl-portletItem {
+        border-bottom: 1px solid $white;
+        margin:0 -5px;
+        }
+.portletBlueLinePortlet .bl-portletItem:last-child {
+        border-bottom: 0;
+        }
+.portletBlueLinePortlet .bl-portletItem a {
+        margin:0 5px;
+        }
+.portletBlueLinePortlet .bl-portletFooter {
+        font-size: 10px;
+        text-align: right;
+        }
+#portlet-glossary-content img {padding:0 6px 2px;}
+.portletFlgStatusPortlet {
+  background:$gruenlight !important;
+}
+.portletFlgStatusPortlet h4 {
+  color: $white !important;
+  border-bottom:0;
+}
+.Flg {
+    overflow: hidden;
+  }
+.FlgResults {
+display: table;
+width: 100%;
+border-collapse: collapse;
+}
+.Flg-text h4:after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background-position: -16px -413px;
+  padding: 0 16px 0 0;
+  }
+.Flg-inner {
+  display: table-row;
+  vertical-align: top;
+  overflow: hidden;
+}
+.Flg-text {
+display: table-cell;
+width: 50%;
+vertical-align:bottom;
+}
+.Flg-text h4 {
+  color: $white !important;
+}
+.Flg-thumb {
+display: table-cell;
+vertical-align: top;
+width: 50%;
+max-width: 10em;
+}
+.Flg-thumb img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.portletStichwort {
+        background:white;
+        ul {
+                li {
+                        a {
+        line-height:30px;
+                        }
+        button.btn {
+        text-shadow: none;
+        background-image:none;
+        border:none;
+        background-color:$bluehover;
+        }
+        .btn-topic {
+        color:white;
+        }
+        .btn-mini {
+        border-radius:10px;
+        }
+                }
+        }
+}
+
+.portletfeedmixer .portletItem {
+      &:hover {
+          background-color: $lightGrayBgColor;
+      }
+}
+.portletBGHWLoginPortlet { 
+	.portletFooter {
+		padding:10px;
+	}
+	.form-group {
+		padding:0 10px;
+			select {
+				font-size: 12px;
+				height: 34px;    
+				width: 100% !important;
+				word-wrap: break-word;
+				}
+	input {
+		   width: 100% !important;
+    		   margin-left: 0 !important;
+		   margin-bottom:10px;
+	}
+	}
+	.btn-small {
+	margin:0 10px 0 10px !important;
+	}
+	.btn-primary {
+		    border-color: white;
+	}
+}
+@media  (max-width: 768px) {
+	.portletBGHWLoginPortlet { 
+	.form-group {
+			select {
+				font-size: 14px;
+			}
+	}
+}
+}
+
+.widget input[type='text'],
+.widget input[type='checkbox'] {
+	width:100%;
+	}

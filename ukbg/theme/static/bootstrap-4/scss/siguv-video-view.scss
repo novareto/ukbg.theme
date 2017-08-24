@@ -1,0 +1,28 @@
+// Video card view und video listing view //
+
+.video-view {
+	background-color: white;
+	}
+.embed-responsive {
+	.embed-responsive-item,
+  	iframe,
+  	embed,
+  	object,
+  	video {
+    		position: absolute;
+    		top: 0;
+    		left: 0;
+    		bottom: 0;
+    		height: 100%;
+    		width: 100%;
+    		border: 0;
+		padding-right:10px; 
+		padding-bottom:15px;
+	}
+}
+.video-view-description {
+		color:#004994;
+	}
+.more-video {
+	padding-left:20px;
+	}

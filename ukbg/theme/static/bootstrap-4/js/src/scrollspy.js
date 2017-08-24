@@ -3,7 +3,7 @@ import Util from './util'
 
 /**
  * --------------------------------------------------------------------------
- * Bootstrap (v4.0.0-beta): scrollspy.js
+ * Bootstrap (v4.0.0-alpha.4): scrollspy.js
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * --------------------------------------------------------------------------
  */
@@ -18,7 +18,7 @@ const ScrollSpy = (($) => {
    */
 
   const NAME               = 'scrollspy'
-  const VERSION            = '4.0.0-beta'
+  const VERSION            = '4.0.0-alpha.4'
   const DATA_KEY           = 'bs.scrollspy'
   const EVENT_KEY          = `.${DATA_KEY}`
   const DATA_API_KEY       = '.data-api'
@@ -45,15 +45,18 @@ const ScrollSpy = (($) => {
   const ClassName = {
     DROPDOWN_ITEM : 'dropdown-item',
     DROPDOWN_MENU : 'dropdown-menu',
+    NAV_LINK      : 'nav-link',
+    NAV           : 'nav',
     ACTIVE        : 'active'
   }
 
   const Selector = {
     DATA_SPY        : '[data-spy="scroll"]',
     ACTIVE          : '.active',
-    NAV_LIST_GROUP  : '.nav, .list-group',
+    LIST_ITEM       : '.list-item',
+    LI              : 'li',
+    LI_DROPDOWN     : 'li.dropdown',
     NAV_LINKS       : '.nav-link',
-    LIST_ITEMS      : '.list-group-item',
     DROPDOWN        : '.dropdown',
     DROPDOWN_ITEMS  : '.dropdown-item',
     DROPDOWN_TOGGLE : '.dropdown-toggle'
@@ -78,14 +81,13 @@ const ScrollSpy = (($) => {
       this._scrollElement = element.tagName === 'BODY' ? window : element
       this._config        = this._getConfig(config)
       this._selector      = `${this._config.target} ${Selector.NAV_LINKS},`
-                          + `${this._config.target} ${Selector.LIST_ITEMS},`
                           + `${this._config.target} ${Selector.DROPDOWN_ITEMS}`
       this._offsets       = []
       this._targets       = []
       this._activeTarget  = null
       this._scrollHeight  = 0
 
-      $(this._scrollElement).on(Event.SCROLL, (event) => this._process(event))
+      $(this._scrollElement).on(Event.SCROLL, $.proxy(this._process, this))
 
       this.refresh()
       this._process()
@@ -106,13 +108,13 @@ const ScrollSpy = (($) => {
     // public
 
     refresh() {
-      const autoMethod = this._scrollElement !== this._scrollElement.window ?
+      let autoMethod = this._scrollElement !== this._scrollElement.window ?
         OffsetMethod.POSITION : OffsetMethod.OFFSET
 
-      const offsetMethod = this._config.method === 'auto' ?
+      let offsetMethod = this._config.method === 'auto' ?
         autoMethod : this._config.method
 
-      const offsetBase = offsetMethod === OffsetMethod.POSITION ?
+      let offsetBase = offsetMethod === OffsetMethod.POSITION ?
         this._getScrollTop() : 0
 
       this._offsets = []
@@ -120,26 +122,23 @@ const ScrollSpy = (($) => {
 
       this._scrollHeight = this._getScrollHeight()
 
-      const targets = $.makeArray($(this._selector))
+      let targets = $.makeArray($(this._selector))
 
       targets
         .map((element) => {
           let target
-          const targetSelector = Util.getSelectorFromElement(element)
+          let targetSelector = Util.getSelectorFromElement(element)
 
           if (targetSelector) {
             target = $(targetSelector)[0]
           }
 
-          if (target) {
-            const targetBCR = target.getBoundingClientRect()
-            if (targetBCR.width || targetBCR.height) {
-              // todo (fat): remove sketch reliance on jQuery position/offset
-              return [
-                $(target)[offsetMethod]().top + offsetBase,
-                targetSelector
-              ]
-            }
+          if (target && (target.offsetWidth || target.offsetHeight)) {
+            // todo (fat): remove sketch reliance on jQuery position/offset
+            return [
+              $(target)[offsetMethod]().top + offsetBase,
+              targetSelector
+            ]
           }
           return null
         })
@@ -187,7 +186,7 @@ const ScrollSpy = (($) => {
 
     _getScrollTop() {
       return this._scrollElement === window ?
-          this._scrollElement.pageYOffset : this._scrollElement.scrollTop
+          this._scrollElement.scrollY : this._scrollElement.scrollTop
     }
 
     _getScrollHeight() {
@@ -197,39 +196,33 @@ const ScrollSpy = (($) => {
       )
     }
 
-    _getOffsetHeight() {
-      return this._scrollElement === window ?
-          window.innerHeight : this._scrollElement.getBoundingClientRect().height
-    }
-
     _process() {
-      const scrollTop    = this._getScrollTop() + this._config.offset
-      const scrollHeight = this._getScrollHeight()
-      const maxScroll    = this._config.offset
+      let scrollTop    = this._getScrollTop() + this._config.offset
+      let scrollHeight = this._getScrollHeight()
+      let maxScroll    = this._config.offset
         + scrollHeight
-        - this._getOffsetHeight()
+        - this._scrollElement.offsetHeight
 
       if (this._scrollHeight !== scrollHeight) {
         this.refresh()
       }
 
       if (scrollTop >= maxScroll) {
-        const target = this._targets[this._targets.length - 1]
+        let target = this._targets[this._targets.length - 1]
 
         if (this._activeTarget !== target) {
           this._activate(target)
         }
-        return
       }
 
-      if (this._activeTarget && scrollTop < this._offsets[0] && this._offsets[0] > 0) {
+      if (this._activeTarget && scrollTop < this._offsets[0]) {
         this._activeTarget = null
         this._clear()
         return
       }
 
       for (let i = this._offsets.length; i--;) {
-        const isActiveTarget = this._activeTarget !== this._targets[i]
+        let isActiveTarget = this._activeTarget !== this._targets[i]
             && scrollTop >= this._offsets[i]
             && (this._offsets[i + 1] === undefined ||
                 scrollTop < this._offsets[i + 1])
@@ -251,17 +244,15 @@ const ScrollSpy = (($) => {
                `${selector}[href="${target}"]`
       })
 
-      const $link = $(queries.join(','))
+      let $link = $(queries.join(','))
 
       if ($link.hasClass(ClassName.DROPDOWN_ITEM)) {
         $link.closest(Selector.DROPDOWN).find(Selector.DROPDOWN_TOGGLE).addClass(ClassName.ACTIVE)
         $link.addClass(ClassName.ACTIVE)
       } else {
-        // Set triggered link as active
-        $link.addClass(ClassName.ACTIVE)
-        // Set triggered links parents as active
-        // With both <ul> and <nav> markup a parent is the previous sibling of any nav ancestor
-        $link.parents(Selector.NAV_LIST_GROUP).prev(`${Selector.NAV_LINKS}, ${Selector.LIST_ITEMS}`).addClass(ClassName.ACTIVE)
+        // todo (fat) this is kinda sus...
+        // recursively add actives to tested nav-links
+        $link.parents(Selector.LI).find(Selector.NAV_LINKS).addClass(ClassName.ACTIVE)
       }
 
       $(this._scrollElement).trigger(Event.ACTIVATE, {
@@ -278,8 +269,8 @@ const ScrollSpy = (($) => {
 
     static _jQueryInterface(config) {
       return this.each(function () {
-        let data      = $(this).data(DATA_KEY)
-        const _config = typeof config === 'object' && config
+        let data    = $(this).data(DATA_KEY)
+        let _config = typeof config === 'object' && config || null
 
         if (!data) {
           data = new ScrollSpy(this, _config)
@@ -306,10 +297,10 @@ const ScrollSpy = (($) => {
    */
 
   $(window).on(Event.LOAD_DATA_API, () => {
-    const scrollSpys = $.makeArray($(Selector.DATA_SPY))
+    let scrollSpys = $.makeArray($(Selector.DATA_SPY))
 
     for (let i = scrollSpys.length; i--;) {
-      const $spy = $(scrollSpys[i])
+      let $spy = $(scrollSpys[i])
       ScrollSpy._jQueryInterface.call($spy, $spy.data())
     }
   })
