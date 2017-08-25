@@ -30,6 +30,7 @@ setup(name='ukbg.theme',
           'diazo==1.0.6',
           'plone.app.theming==1.3.0',
           'experimental.cssselect==0.3',
+          'cssselect',
 
       ],
       entry_points="""
