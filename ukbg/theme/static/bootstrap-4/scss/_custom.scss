@@ -59,6 +59,8 @@ $kbd-bg:                      #212529 !default;
 
 
 // Plone toolbar porting
-@import "toolbar-plone-variables.scss";
-@import "toolbar.plone.scss";
+$fontsPrefix: $icon-font-path;
+@import "plone-toolbar-variables.scss";
+@import "plone-toolbar.scss";
+@import "plone-fontello.scss";
 

@@ -12,7 +12,7 @@ body {
 #wrap {
 		background:$blueLighter;
 		padding-top:15px;
-	.maincolumn   {	
+	.maincolumn   {
 		border-bottom:1px solid $blue;
 		background:white;
 		}
@@ -22,19 +22,19 @@ body {
 // fonts
 @font-face {
   font-family: DGUVMetaWeb-Bold;
-  src: url("../fonts/DGUVMetaWeb-Bold.eot");
+  src: url("#{$icon-font-path}DGUVMetaWeb-Bold.eot");
 }
 @font-face {
   font-family: DGUVMetaWeb-Bold;
-  src: url("../fonts/DGUVMetaWeb-Bold.woff") format("woff");
+  src: url("#{$icon-font-path}DGUVMetaWeb-Bold.woff") format("woff");
 }
 @font-face {
   font-family: DGUVMetaWeb-Normal;
-  src: url("../fonts/DGUVMetaWeb-Normal.eot");
+  src: url("#{$icon-font-path}DGUVMetaWeb-Normal.eot");
 }
 @font-face {
   font-family: DGUVMetaWeb-Normal;
-  src: url("../fonts/DGUVMetaWeb-Normal.woff") format("woff");
+  src: url("#{$icon-font-path}DGUVMetaWeb-Normal.woff") format("woff");
 }
 $dguv-bold-font-name: "DGUVMetaWeb-Bold";
 $dguv-normal-font-name: "DGUVMetaWeb-Normal";
@@ -46,7 +46,7 @@ $dguv-normal-font-name: "DGUVMetaWeb-Normal";
         }
 .nvaEventContent.col-md-offset-2 {
         margin-left:0;
-        }  
+        }
 }
 
 
@@ -54,7 +54,7 @@ $dguv-normal-font-name: "DGUVMetaWeb-Normal";
 .table-striped caption,
 #parent-fieldname-description,
 .documentDescription,
-h1, h2, h3, h4 { 
+h1, h2, h3, h4 {
   	font-family: $dguv-bold-font-name, sans-serif;
 }
 .documentByLine {padding:10px 0}
@@ -68,7 +68,7 @@ h1 {color:$blue;}
 	color:$white;
 	font-size:$font-size-h4;
 	}
-p, ul, .portlet-column h4, .panel-heading h4 { 
+p, ul, .portlet-column h4, .panel-heading h4 {
   	font-family: $dguv-normal-font-name, sans-serif;
 }
 ul.listTypeSquare {
@@ -76,7 +76,7 @@ ul.listTypeSquare {
 	padding-left:5px !important;
 	li {padding-left:0px;text-indent: -0px !important;}
 	}
-.panel-heading h4 { 
+.panel-heading h4 {
 	color:white;
 	}
 .documentDescription {
@@ -86,7 +86,7 @@ ul.listTypeSquare {
 	font-family:$dguv-bold-font-name;
 	text-decoration:unterline;
 }
-.newsImageContainer {    
+.newsImageContainer {
 	float: left;
     	margin-right: 20px;
     	margin-bottom: 10px;
@@ -161,7 +161,7 @@ a.tile {
 .navbar-default .brand {
 	color: white;
 	}
-.navbar-fixed-top .navbar-inner, 
+.navbar-fixed-top .navbar-inner,
 .navbar-static-top .navbar-inner {
 	border-width: 0;
 	}
@@ -228,8 +228,8 @@ a.tile {
 	#viewlet-below-content {display:none;}
         /*
 	#side-menu {
-		background: $blueLighter; 
-		border:1px solid #eee; 
+		background: $blueLighter;
+		border:1px solid #eee;
 		-webkit-box-shadow: 3px 3px 5px 0px;
 		-moz-box-shadow: 3px 3px 5px 0px;
 		box-shadow: 3px 3px 5px 0px;
@@ -381,7 +381,7 @@ dl.portletCollection {
 	margin-bottom:10px;
 	}
 }
-dl.portletLogin {	
+dl.portletLogin {
 	label {margin-left:10px}
 	}
 .newsPromotion ul,
@@ -478,11 +478,11 @@ li.divider-vertical:last-child {
         .pattern-math {
             padding-top: 80px; padding-bottom: 80px;
         }
-        
+
         .slider-ver .ct > .ct-viewport {
             padding: 0;
             background-color: #ddd;
-            border: 6px solid #fff; 
+            border: 6px solid #fff;
         }
         .slider-ver .ct-pag .ct-pagitem {
             padding: 25px;
@@ -550,7 +550,7 @@ h3.newsDescription {
   & > a {
     display:block;
     padding-bottom: 1em;
-	p, .nvaEventTitleDate {color:$font;} 
+	p, .nvaEventTitleDate {color:$font;}
  }
 
   .nvaEventTitle {
