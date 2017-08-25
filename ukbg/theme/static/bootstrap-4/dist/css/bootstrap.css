@@ -5567,7 +5567,8 @@ footer {
   }
   .plone-toolbar-left #edit-zone #personal-bar-container {
     position: absolute;
-    bottom: 0;
+    /*bottom: 0;*/
+    bottom: 3rem;
     background-color: black;
     border-top: 1px solid #DDDDDD;
     -webkit-box-shadow: -6px 2px 6px 2px #DDD;
