@@ -56,3 +56,9 @@ $kbd-bg:                      #212529 !default;
 @import '../assets/css/ms-default-skin.scss';
 @import '../assets/css/ms-tabs-style.scss';
 @import "siguv-master-slider.scss";
+
+
+// Plone toolbar porting
+@import "toolbar-plone-variables.scss";
+@import "toolbar.plone.scss";
+
