@@ -55,6 +55,8 @@
         <!-- Header rules -->
         <!--<replace css:theme-children="#logo" css:content="#portal-logo"/>-->
 
+        <copy attributes="id title href " css:theme="h1#logo a" css:content="a#portal-logo"/>
+
         <!-- Utilities -->
         <replace content="//*[@class='selected']/@class">
             <xsl:attribute name="class">active</xsl:attribute>
