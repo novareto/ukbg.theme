@@ -1,9 +1,9 @@
 // Bootstrap overrides
 //
-// Copy variables from `_variables.scss` to this file to override default values
+// Copy variables from `_variables` to this file to override default values
 // without modifying source files.
 
-@import "siguv_variables.scss";
+@import "siguv_variables";
 
 $gray-dark:                 #212529 !default;
 $gray-light:                #868e96 !default;
@@ -21,29 +21,28 @@ $font-size-h4: 1.7rem !default;
 
 $kbd-bg:                      #212529 !default;
 
-
 // our custom_variable definitions
-@import "siguv-old.scss";
-@import "siguv-icon.scss";
-@import "siguv-mobile.scss";
-@import "siguv-responsive-old.scss";
-@import "siguv.scss";
-@import "siguv-navbar.scss";
-@import "siguv-carousel.scss";
-@import "siguv-tabs.scss";
-@import "siguv_images.scss";
-@import "siguv-login.scss";
-@import "siguv-tables.scss";
-@import "siguv-accordion.scss";
-@import "siguv-glossary.scss";
-@import "siguv-overlay.scss";
-@import "siguv-portlet.scss";
-@import "siguv-form.scss";
-@import "siguv-header.scss";
-@import "siguv-footer.scss";
-@import "siguv-navigation.scss";
-@import "siguv-newsletter.scss";
-@import "siguv-video-view.scss";
+@import "siguv-old";
+@import "siguv-icon";
+@import "siguv-mobile";
+@import "siguv-responsive-old";
+@import "siguv";
+@import "siguv-navbar";
+@import "siguv-carousel";
+@import "siguv-tabs";
+@import "siguv_images";
+@import "siguv-login";
+@import "siguv-tables";
+@import "siguv-accordion";
+@import "siguv-glossary";
+@import "siguv-overlay";
+@import "siguv-portlet";
+@import "siguv-form";
+@import "siguv-header";
+@import "siguv-footer";
+@import "siguv-navigation";
+@import "siguv-newsletter";
+@import "siguv-video-view";
 
 // ******* pure CSS outside bootstrap package *******
 @import '../assets/css/offcanvas.scss';
@@ -53,14 +52,14 @@ $kbd-bg:                      #212529 !default;
 
 // MasterSlider
 @import '../assets/css/masterslider.scss';
-@import '../assets/css/ms-default-skin.scss';
-@import '../assets/css/ms-tabs-style.scss';
-@import "siguv-master-slider.scss";
+@import '../assets/css/ms-default-skin';
+@import '../assets/css/ms-tabs-style';
+@import "siguv-master-slider";
 
 
 // Plone toolbar porting
 $fontsPrefix: $icon-font-path;
-@import "plone-toolbar-variables.scss";
-@import "plone-toolbar.scss";
-@import "plone-fontello.scss";
+@import "plone-toolbar-variables";
+@import "plone-toolbar";
+@import "plone-fontello";
 

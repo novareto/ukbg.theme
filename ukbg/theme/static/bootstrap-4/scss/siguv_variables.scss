@@ -406,6 +406,11 @@ $navbar-default-toggle-hover-bg:           #094079;
 $navbar-default-toggle-icon-bar-bg:        #fff;
 $navbar-default-toggle-border-color:       #fff;
 
+$navbar-light-color:                $navbar-default-link-color;
+$navbar-light-hover-color:          $navbar-default-link-hover-color;
+$navbar-light-active-color:         $navbar-default-link-active-color;
+$navbar-light-disabled-color:       $navbar-default-link-disabled-color;
+
 
 //=== Inverted navbar
 // Reset inverted navbar basics
