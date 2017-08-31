@@ -10679,7 +10679,7 @@ dl.portletCollection .portletHeader a,
 
 .portletNews div > div,
 .portletCollection div > div {
-  line-height: 20;
+  line-height: 20 px;
   padding-right: 5px;
   margin-bottom: 5px;
 }
@@ -10717,7 +10717,7 @@ dl.portletLogin label {
 .portlet-column p a,
 .portlet-column ul li a {
   color: #333;
-  line-height: 20;
+  line-height: 20 px;
 }
 
 .list-group.portletItem li,
@@ -12217,7 +12217,7 @@ label {
 .documentActions ul li,
 .footer ul li {
   display: inline;
-  line-height: 20;
+  line-height: 20 px;
 }
 
 .footer li a {

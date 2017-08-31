@@ -5,7 +5,7 @@
 	.footer-wrapper .col-md-6 {
 	padding-left:0;
 	padding-right:0;
-	} 
+	}
 	.container {
 		padding:0 !important;
 	}
@@ -20,7 +20,7 @@
 .documentActions ul li,
 .footer ul li {
         display:inline;
-        line-height:$line-height-computed;
+        line-height:$line-height-computed px;
         }
 .footer li a{
       color:$footer-font;
@@ -40,7 +40,7 @@
 @media (max-width: 979px) {
          .footer {
         background:$blue;
-	min-height:90px;   
+	min-height:90px;
 	padding:10px 0;
 	margin-left:-3px;
 	margin-right:-3px;

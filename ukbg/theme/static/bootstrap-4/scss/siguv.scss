@@ -369,7 +369,7 @@ dl.portletCollection .portletHeader,
 
 .portletNews div >div,
 .portletCollection div > div {
-    line-height: $line-height-computed;
+    line-height: $line-height-computed px;
     padding-right: 5px;
     margin-bottom:5px;
     }
@@ -402,7 +402,7 @@ dl.portletLogin {
 .portlet-column p a,
 .portlet-column ul li a {
     color:$font;
-    line-height: $line-height-computed;
+    line-height: $line-height-computed px;
 }
 .list-group.portletItem li,
 .portletRss > div{
