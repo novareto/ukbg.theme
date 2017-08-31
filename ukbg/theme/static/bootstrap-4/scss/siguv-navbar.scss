@@ -66,9 +66,13 @@
   .nav-link {
     + .nav-link {
       margin-left: 0;
+      font-size: 14px;
     }
   }
   .nav-item + .nav-item {
     margin-left: 0;
   }
+}
+.navbar {
+    padding: 0;
 }

@@ -151,7 +151,9 @@ a.tile {
         padding: 4px 8px 6px;}
     }
 .navbar .nav > li:first-child {
-    margin-left:-6px;}
+    //margin-left: -6px;
+    margin-left: 0;
+}
 .navbar-default .navbar-inner {
     background-color: $blue;
     background-image: none;
