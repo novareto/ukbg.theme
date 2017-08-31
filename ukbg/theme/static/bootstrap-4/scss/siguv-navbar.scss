@@ -59,3 +59,16 @@
         background-image:none;
     }
 }
+
+
+// Css further customization
+.navbar-nav {
+  .nav-link {
+    + .nav-link {
+      margin-left: 0;
+    }
+  }
+  .nav-item + .nav-item {
+    margin-left: 0;
+  }
+}

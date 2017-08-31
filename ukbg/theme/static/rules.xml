@@ -164,12 +164,11 @@
         </replace>-->
 
         <!-- Globalnav-->
-
-       <replace css:content-children="#portal-globalnav > li" >
+        <!--Bs4 nav implementation-->
+        <replace css:content-children="#portal-globalnav > li" >
                 <xsl:attribute name="class"><xsl:value-of select="@class" /> nav-item</xsl:attribute>
                 <xsl:apply-templates />
         </replace>
-
         <replace css:content-children="#portal-globalnav > li > a" >
                 <xsl:attribute name="class"><xsl:value-of select="@class" /> nav-link</xsl:attribute>
                 <xsl:apply-templates />

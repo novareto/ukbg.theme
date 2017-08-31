@@ -5,6 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
+@import "siguv_variables";
+
 // Core variables and mixins
 @import "custom";
 @import "variables";
@@ -52,3 +54,27 @@
 
 // Utility classes
 @import "utilities";
+
+
+// our custom_variable definitions
+@import "siguv-old";
+@import "siguv-icon";
+@import "siguv-mobile";
+@import "siguv-responsive-old";
+@import "siguv";
+@import "siguv-navbar";
+@import "siguv-carousel";
+@import "siguv-tabs";
+@import "siguv_images";
+@import "siguv-login";
+@import "siguv-tables";
+@import "siguv-accordion";
+@import "siguv-glossary";
+@import "siguv-overlay";
+@import "siguv-portlet";
+@import "siguv-form";
+@import "siguv-header";
+@import "siguv-footer";
+@import "siguv-navigation";
+@import "siguv-newsletter";
+@import "siguv-video-view";

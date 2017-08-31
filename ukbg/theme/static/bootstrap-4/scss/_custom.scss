@@ -3,7 +3,6 @@
 // Copy variables from `_variables` to this file to override default values
 // without modifying source files.
 
-@import "siguv_variables";
 
 $gray-dark:                 #212529 !default;
 $gray-light:                #868e96 !default;
@@ -21,28 +20,7 @@ $font-size-h4: 1.7rem !default;
 
 $kbd-bg:                      #212529 !default;
 
-// our custom_variable definitions
-@import "siguv-old";
-@import "siguv-icon";
-@import "siguv-mobile";
-@import "siguv-responsive-old";
-@import "siguv";
-@import "siguv-navbar";
-@import "siguv-carousel";
-@import "siguv-tabs";
-@import "siguv_images";
-@import "siguv-login";
-@import "siguv-tables";
-@import "siguv-accordion";
-@import "siguv-glossary";
-@import "siguv-overlay";
-@import "siguv-portlet";
-@import "siguv-form";
-@import "siguv-header";
-@import "siguv-footer";
-@import "siguv-navigation";
-@import "siguv-newsletter";
-@import "siguv-video-view";
+
 
 // ******* pure CSS outside bootstrap package *******
 @import '../assets/css/offcanvas.scss';
@@ -62,4 +40,5 @@ $fontsPrefix: $icon-font-path;
 @import "plone-toolbar-variables";
 @import "plone-toolbar";
 @import "plone-fontello";
+
 
