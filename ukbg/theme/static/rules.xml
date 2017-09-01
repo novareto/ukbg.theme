@@ -176,6 +176,12 @@
 
         <replace css:content-children='#portal-globalnav' css:theme-children='.portal-globalnav'/>
 
+        <!-- bs4 formatting table -->
+        <replace css:content-children="table.listing" >
+                <xsl:attribute name="class"><xsl:value-of select="@class" /> table table-striped</xsl:attribute>
+                <xsl:apply-templates />
+        </replace>
+
         <!-- Tab Gallery -->
         <replace css:content='#master-slider' css:theme='#master-slider'/>
         <!-- Etem HEader Bild -->
