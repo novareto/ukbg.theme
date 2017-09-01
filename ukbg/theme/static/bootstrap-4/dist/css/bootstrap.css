@@ -11569,6 +11569,10 @@ table.tablesaw {
   }
 }
 
+.table .fc-breadcrumbs-container {
+  background-color: #FFF;
+}
+
 #accordion h4 > a {
   display: block;
 }
