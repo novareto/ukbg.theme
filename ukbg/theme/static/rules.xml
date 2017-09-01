@@ -417,53 +417,42 @@
             </replace>
 
             <!-- Alert message -->
-            <strip css:content=".portalMessage dd"/>
-            <drop css:content=".portalMessage dt"/>
+            <!-- BS4... plone5 is already rendering this as wanted.
+                Just add close button and alert-style
+            -->
             <replace css:content=".portalMessage">
-
                 <xsl:choose>
-
                     <xsl:when css:test=".portalMessage[style]"/>
 
                     <xsl:when css:test=".portalMessage.info">
                         <div class="alert alert-dismissable alert-info">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <strong><xsl:apply-templates select="./dt/text()"/></strong>
-                            <!-- <xsl:if test="not(./dd/)">body node missing</xsl:if> -->
-
-                            <xsl:apply-templates select="./*"/>
+                            <xsl:apply-templates select="./node()"/>
                         </div>
                     </xsl:when>
 
                     <xsl:when css:test=".portalMessage.error">
                         <div class="alert alert-dismissable alert-danger">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <strong><xsl:apply-templates select="./dt/text()"/></strong>
-
-                            <xsl:apply-templates select="./dd/text()"/>
+                            <xsl:apply-templates select="./node()"/>
                         </div>
                     </xsl:when>
 
                     <xsl:when css:test=".portalMessage.success">
                         <div class="alert alert-dismissable alert-warning">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <strong><xsl:apply-templates select="./dt/text()"/></strong>
-
-                            <xsl:apply-templates select="./dd/text()"/>
+                            <xsl:apply-templates select="./node()"/>
                         </div>
                     </xsl:when>
 
                     <xsl:otherwise>
                         <div class="alert alert-dismissable alert-info">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <strong><xsl:apply-templates select="./dt/text()"/></strong>
-
-                            <xsl:apply-templates select="./dd/text()"/>
+                            <xsl:apply-templates select="./node()"/>
                         </div>
                     </xsl:otherwise>
                 </xsl:choose>
             </replace>
-
             <drop css:content=".contentActions .arrowDownAlternative"/>
 
             <replace css:content=".actionSeparator">
