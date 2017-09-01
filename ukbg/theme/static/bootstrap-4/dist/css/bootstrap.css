@@ -9626,6 +9626,15 @@ li.listItem a:before {
   content: "\f0da";
 }
 
+#content-core ul.pagination li {
+  text-indent: inherit;
+  padding-left: inherit;
+}
+
+#content-core ul.pagination li::before {
+  content: "";
+}
+
 #mobile-site-action {
   float: right;
   width: 100%;
