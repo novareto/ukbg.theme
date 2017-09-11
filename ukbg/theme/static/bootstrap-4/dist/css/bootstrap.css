@@ -2329,7 +2329,6 @@ footer {
 }
 
 /* '' */
-/*@import "plone-thumbs";*/
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;
@@ -9647,7 +9646,18 @@ li.listItem a:before {
 }
 
 #content-core ul.pagination li::before {
-  content: "";
+  content: none;
+}
+
+#content-core .pat-select2 ul li,
+#content-core .pat-relateditems ul li {
+  text-indent: inherit;
+  padding-bottom: 0.25rem;
+}
+
+#content-core .pat-select2 ul li::before,
+#content-core .pat-relateditems ul li::before {
+  content: none;
 }
 
 #mobile-site-action {

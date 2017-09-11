@@ -400,6 +400,19 @@ li.listItem {
         padding-left: inherit;
         }
     li::before {
-        content: "";
+        content: none;
     }
+}
+
+// fix pat-select2 rendering
+#content-core .pat-select2 ul,
+#content-core .pat-relateditems ul {
+    li {
+        text-indent: inherit;
+        padding-bottom: 0.25rem;
+    }
+    li::before {
+        content: none;
+    }
+
 }
