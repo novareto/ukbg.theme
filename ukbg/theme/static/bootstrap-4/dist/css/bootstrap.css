@@ -2329,6 +2329,173 @@ footer {
 }
 
 /* '' */
+.portletSiteSetup .portletHeader {
+  border-radius: 4px 4px 0 0;
+  background: #f2f1f1;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 13px 15px;
+  color: #696969;
+}
+
+.portletSiteSetup .configlets {
+  border-radius: 0 0 4px 4px;
+  margin: 0 0 1rem 0;
+}
+
+.portletSiteSetup .portletContent {
+  font-size: 14px;
+  border-top: 1px solid #e5e5e5;
+  background: #fff;
+  font-weight: 400;
+}
+
+.portlet.portletSiteSetup .portletContent > ul {
+  list-style: none;
+  text-align: center;
+  padding: inherit;
+}
+
+.portlet.portletSiteSetup .portletContent > ul > li a:before {
+  content: "";
+}
+
+.portlet.portletSiteSetup .portletContent > ul li:hover {
+  background: #edecec;
+}
+
+.portletNavigationTree.portletSiteSetup nav.portletContent > ul > li a {
+  border: none;
+  text-align: center;
+  height: 100%;
+  padding: 0;
+  border: none;
+  padding: 0px;
+  color: #4D4D4D;
+}
+
+.portletNavigationTree.portletSiteSetup nav.portletContent > ul > li a span {
+  font-size: 50px;
+  text-align: center;
+  display: block;
+  color: #4d4d4d;
+}
+
+.portletNavigationTree.portletSiteSetup nav.portletContent > ul > li a:hover {
+  text-decoration: none;
+}
+
+.portletNavigationTree.portletSiteSetup ul {
+  background: #edecec;
+  padding-bottom: 20px;
+}
+
+.portletNavigationTree.portletSiteSetup li {
+  vertical-align: top;
+}
+
+.portletNavigationTree.portletSiteSetup ul > li > a:hover:after {
+  content: "";
+}
+
+.portletNavigationTree.portletSiteSetup .inner-configlet {
+  margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.portletNavigationTree.portletSiteSetup .inner-configlet:hover {
+  background: rgba(255, 255, 255, 0.67);
+  border-radius: 5px;
+  -webkit-box-shadow: inset 1px 1px 3px #bbbbbb;
+          box-shadow: inset 1px 1px 3px #bbbbbb;
+}
+
+.portletNavigationTree.portletSiteSetup .inner-configlet:hover span {
+  color: #333;
+}
+
+.template-overview-controlpanel .portlet.portletSiteSetup .portletContent > ul > li {
+  height: 120px;
+}
+
+#portlet-prefs ul ul {
+  padding-top: 10px;
+}
+
+#portlet-prefs ul ul li {
+  padding-top: 10px;
+}
+
+#portlet-prefs ul ul li a {
+  text-align: inherit;
+  padding-left: 40px;
+}
+
+#portlet-prefs ul ul li a:before {
+  content: "•";
+  position: absolute;
+  font-size: 20;
+  margin-top: -9px;
+  left: 15px;
+  color: #a7daf2;
+}
+
+.template-usergroup-groupprefs .field,
+.template-usergroup-userprefs .field,
+.template-usergroup-controlpanel .field,
+.template-member-registration .field {
+  margin-top: 2em;
+}
+
+.template-usergroup-groupprefs .formControls,
+.template-usergroup-userprefs .formControls,
+.template-usergroup-controlpanel .formControls,
+.template-member-registration .formControls {
+  border-top: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  margin-bottom: 1em;
+}
+
+.template-usergroup-groupprefs table.listing,
+.template-usergroup-userprefs table.listing,
+.template-usergroup-controlpanel table.listing,
+.template-member-registration table.listing {
+  margin-bottom: 0.5em;
+}
+
+.template-usergroup-groupprefs input.quickSearch,
+.template-usergroup-userprefs input.quickSearch,
+.template-usergroup-controlpanel input.quickSearch,
+.template-member-registration input.quickSearch {
+  margin-bottom: 0.5em;
+}
+
+.template-usergroup-groupprefs .listingCheckbox,
+.template-usergroup-userprefs .listingCheckbox,
+.template-usergroup-controlpanel .listingCheckbox,
+.template-member-registration .listingCheckbox {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.template-usergroup-groupprefs form,
+.template-usergroup-userprefs form {
+  overflow: scroll;
+}
+
+.template-actions-controlpanel #content-core .addAction {
+  height: 2em;
+}
+
+.template-actions-controlpanel #content-core section.portlet {
+  clear: both;
+}
+
+.template-actions-controlpanel #content-core ol.configlets li {
+  margin: 1.2em;
+}
+
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   font-family: sans-serif;

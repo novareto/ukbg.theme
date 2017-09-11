@@ -20,7 +20,7 @@ $font-size-h4: 1.7rem !default;
 
 $kbd-bg:                      #212529 !default;
 
-
+$plone-portlet-list-bullet: #64bee8;
 
 // ******* pure CSS outside bootstrap package *******
 @import '../assets/css/offcanvas.scss';
@@ -40,5 +40,7 @@ $fontsPrefix: $icon-font-path;
 @import "plone-toolbar-variables";
 @import "plone-toolbar";
 @import "plone-fontello";
+@import "plone-controlpanels";
+
 
 
