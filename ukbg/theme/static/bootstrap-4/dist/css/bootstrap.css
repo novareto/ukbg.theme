@@ -12499,6 +12499,10 @@ label {
   border-bottom: 0;
 }
 
+ul.navTree {
+  padding-left: 1rem;
+}
+
 li.navTreeItem {
   display: block;
   text-indent: -16px;
