@@ -10624,7 +10624,7 @@ a.tile {
 .navbar-default .navbar-inner {
   background-color: #004994;
   background-image: none;
-  min-height: 32px;
+  min-height: 33px;
   border-color: #004994;
   -webkit-filter: none;
           filter: none;
@@ -12500,7 +12500,7 @@ label {
 }
 
 ul.navTree {
-  padding-left: 1rem;
+  padding-left: 0.5rem;
 }
 
 li.navTreeItem {
