@@ -10435,6 +10435,10 @@ ul.mobile-site-action {
   }
 }
 
+#logo {
+  margin-top: 1rem;
+}
+
 body {
   background: url("../../../assets/img/background.jpg") repeat-x fixed left top;
   background-color: #6d9ac1;
