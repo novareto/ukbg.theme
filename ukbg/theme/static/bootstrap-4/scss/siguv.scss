@@ -157,9 +157,10 @@ a.tile {
 .navbar-default .navbar-inner {
     background-color: $blue;
     background-image: none;
-border-color: $blue;
-filter:none;
-}
+    min-height: 33px;
+    border-color: $blue;
+    filter:none;
+    }
 .navbar-default .brand {
     color: white;
     }
