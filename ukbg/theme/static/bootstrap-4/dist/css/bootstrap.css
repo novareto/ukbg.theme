@@ -8902,10 +8902,6 @@ a.top {
   margin-right: 5px;
 }
 
-.navbar-inner {
-  min-height: 26px;
-}
-
 .navbar-inner .container-fluid {
   padding-left: 0;
 }
@@ -10628,6 +10624,7 @@ a.tile {
 .navbar-default .navbar-inner {
   background-color: #004994;
   background-image: none;
+  min-height: 33px;
   border-color: #004994;
   -webkit-filter: none;
           filter: none;
