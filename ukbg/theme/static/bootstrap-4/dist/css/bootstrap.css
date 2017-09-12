@@ -10624,7 +10624,7 @@ a.tile {
 .navbar-default .navbar-inner {
   background-color: #004994;
   background-image: none;
-  min-height: 33px;
+  min-height: 32px;
   border-color: #004994;
   -webkit-filter: none;
           filter: none;
