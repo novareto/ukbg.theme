@@ -8318,6 +8318,17 @@ a.newsItem:hover,
 .portletEventsPortlet ul:hover {
   background: #f6f6f6;
 }
+.discreet {
+  color: grey;
+  font-size: 80%;
+}
+#content .callout,
+.portletStaticText .callout {
+  background: #eee;
+  padding: 1em;
+  border-left: 1em solid #ccc;
+  clear: both;
+}
 a.tile {
   width: 24px;
   height: 24px;
