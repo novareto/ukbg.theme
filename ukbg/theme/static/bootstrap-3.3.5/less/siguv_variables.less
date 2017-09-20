@@ -88,17 +88,20 @@
 @headings-line-height:    1.1;
 @headings-color:          inherit;
 
-
 //== Iconography
 //
 //## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
 
 //** Load fonts from this directory.
 @icon-font-path:          "../fonts/";
+@fontsPrefix:              @icon-font-path;
 //** File name for all font files.
 @icon-font-name:          "glyphicons-halflings-regular";
 //** Element ID within SVG icon file.
 @icon-font-svg-id:        "glyphicons_halflingsregular";
+
+@fontsPrefix:              "../../../assets/fonts/";
+
 
 
 //== Components
@@ -889,3 +892,13 @@
 //** Horizontal line color.
 @hr-border:                   @gray-lighter;
 @lightGrayBgColor:	      #f6f6f6;
+
+
+// some Plone5 defaults
+@plone-portlet-list-bullet:                 #64bee8;
+@plone-font-weight-light:                   300;
+@plone-state-error-text:                    rgba(0,0,0,.5);
+@plone-state-error-bg:                      #EC9C8D;
+@plone-font-weight-regular:                 400;
+@plone-state-error-bullet:                  #ac493f;
+@plone-alert-error-bullet:                  @plone-state-error-bullet;
