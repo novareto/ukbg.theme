@@ -9,8 +9,8 @@
 
         <prepend theme="html/head" css:content="html head base"/>
 
-        <drop css:theme="meta[http-equiv='Content-Type']"/>
-        <!--<drop css:content="meta[name='viewport']"/>
+        <!-- <drop css:theme="meta[http-equiv='Content-Type']"/>
+        <drop css:content="meta[name='viewport']"/>
         <drop css:content="link[href$='public.css']"/>
         <drop css:content="link[href$='columns.css']"/>
         <drop css:content="link[href$='portlets.css']"/>
@@ -27,15 +27,12 @@
         <drop css:content="link[href$='print.css']"/>
         <drop css:content="link[href$='mobile.css']"/>
         <drop css:content="link[href$='reset.css']"/>
-        <drop css:content="link[href$='base.css']"/>-->
-
-        <drop css:content="link[href$='default.css']" />
-
-        <!--<copy attributes="*" theme="link[href=default.css]"-->
-              <!--content="link[$='default.css]" />-->
-
+        <drop css:content="link[href$='base.css']"/>
         <drop css:content="link[href*='base-cachekey']"/>
-        <drop css:content="link[href*='reset-cachekey']"/>
+        <drop css:content="link[href*='reset-cachekey']"/> -->
+
+                <drop css:content="link[href$='default.css']" />
+
         <!-- Head elements -->
         <replace theme="html head title" css:content="html head title"/>
 
@@ -47,7 +44,6 @@
         <!-- Plone 5 toolbar -->
         <replace css:theme="#edit-zone" css:content="#edit-zone" />
 
-
         <!-- TEMP RULE -->
         <before css:content="#master-slider-container" css:theme="#main"/>
 
@@ -57,8 +53,10 @@
 
         <copy attributes="id title href " css:theme="h1#logo a" css:content="a#portal-logo"/>
 
+
         <!-- Utilities -->
         <replace content="//*[@class='selected']/@class">
+
             <xsl:attribute name="class">active</xsl:attribute>
         </replace>
 
@@ -139,9 +137,8 @@
                 </li>
             </xsl:for-each>
         </replace>
-
-    <!-- Personal tools -->
-     <!--   <append css:content="#portal-personaltools" css:theme="#site-action .navbar"/>
+        <!-- Personal tools
+        <append css:content="#portal-personaltools" css:theme="#site-action .navbar"/>
 
         <replace css:content="dl#portal-personaltools">
             <ul id="portal-personaltools" class="navbar-right nav">
@@ -163,25 +160,8 @@
             </ul>
         </replace>-->
 
-        <!-- Globalnav-->
-        <!--Bs4 nav implementation-->
-        <replace css:content-children="#portal-globalnav > li" >
-                <xsl:attribute name="class"><xsl:value-of select="@class" /> nav-item</xsl:attribute>
-                <xsl:apply-templates />
-        </replace>
-        <replace css:content-children="#portal-globalnav > li > a" >
-                <xsl:attribute name="class"><xsl:value-of select="@class" /> nav-link</xsl:attribute>
-                <xsl:apply-templates />
-        </replace>
-
+        <!-- Globalnav -->
         <replace css:content-children='#portal-globalnav' css:theme-children='.portal-globalnav'/>
-
-        <!-- bs4 formatting table -->
-        <replace css:content-children="table.listing" >
-                <xsl:attribute name="class"><xsl:value-of select="@class" /> table table-striped</xsl:attribute>
-                <xsl:apply-templates />
-        </replace>
-
         <!-- Tab Gallery -->
         <replace css:content='#master-slider' css:theme='#master-slider'/>
         <!-- Etem HEader Bild -->
@@ -417,42 +397,53 @@
             </replace>
 
             <!-- Alert message -->
-            <!-- BS4... plone5 is already rendering this as wanted.
-                Just add close button and alert-style
-            -->
+            <strip css:content=".portalMessage dd"/>
+            <drop css:content=".portalMessage dt"/>
             <replace css:content=".portalMessage">
+
                 <xsl:choose>
+
                     <xsl:when css:test=".portalMessage[style]"/>
 
                     <xsl:when css:test=".portalMessage.info">
                         <div class="alert alert-dismissable alert-info">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <xsl:apply-templates select="./node()"/>
+                            <strong><xsl:apply-templates select="./dt/text()"/></strong>
+                            <!-- <xsl:if test="not(./dd/)">body node missing</xsl:if> -->
+
+                            <xsl:apply-templates select="./*"/>
                         </div>
                     </xsl:when>
 
                     <xsl:when css:test=".portalMessage.error">
                         <div class="alert alert-dismissable alert-danger">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <xsl:apply-templates select="./node()"/>
+                            <strong><xsl:apply-templates select="./dt/text()"/></strong>
+
+                            <xsl:apply-templates select="./dd/text()"/>
                         </div>
                     </xsl:when>
 
                     <xsl:when css:test=".portalMessage.success">
                         <div class="alert alert-dismissable alert-warning">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <xsl:apply-templates select="./node()"/>
+                            <strong><xsl:apply-templates select="./dt/text()"/></strong>
+
+                            <xsl:apply-templates select="./dd/text()"/>
                         </div>
                     </xsl:when>
 
                     <xsl:otherwise>
                         <div class="alert alert-dismissable alert-info">
                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-                            <xsl:apply-templates select="./node()"/>
+                            <strong><xsl:apply-templates select="./dt/text()"/></strong>
+
+                            <xsl:apply-templates select="./dd/text()"/>
                         </div>
                     </xsl:otherwise>
                 </xsl:choose>
             </replace>
+
             <drop css:content=".contentActions .arrowDownAlternative"/>
 
             <replace css:content=".actionSeparator">
