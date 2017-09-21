@@ -7244,6 +7244,22 @@ li.listItem a:before {
   font-size: 14px;
   content: "\f0da";
 }
+#content-core ul.pagination li {
+  padding-left: inherit;
+  text-indent: inherit;
+}
+#content-core ul.pagination li::before {
+  content: none;
+}
+#content-core .pat-select2 ul li,
+#content-core .pat-relateditems ul li {
+  padding-bottom: .25rem;
+  text-indent: inherit;
+}
+#content-core .pat-select2 ul li::before,
+#content-core .pat-relateditems ul li::before {
+  content: none;
+}
 #mobile-site-action {
   position: relative;
   z-index: 32;
