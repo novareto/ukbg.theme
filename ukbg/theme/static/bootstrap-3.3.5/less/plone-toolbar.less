@@ -201,7 +201,7 @@ body.userrole-authenticated {
         height: 100%;
     }
     .plone-toolbar-container{
-        height: 90%;
+        height:90%; /*walkaround original value 1000*/
     }
 }
 .plone-toolbar-top #edit-zone nav > ul ul {height: 0; max-height: 0; width: 180px}
@@ -221,7 +221,7 @@ body.userrole-authenticated {
     }
     nav > ul a > span + span {
         background: none;
-        width: @plone-left-toolbar-expanded - 40px;
+        width: (@plone-left-toolbar-expanded - 40px);
         text-align: left;
         word-wrap: break-word;
         word-break: break-word;
@@ -414,7 +414,7 @@ body.userrole-authenticated {
             }
         }
         .plone-toolbar-container{
-            height: 90%;
+            height: 90%; /*walkaround original at 100*/
             position: relative;
         }
         #personal-bar-container{
@@ -430,7 +430,7 @@ body.userrole-authenticated {
             }
         }
         .plone-toolbar-main{
-            width: @plone-left-toolbar-expanded+18px; /* hide scroll bar */
+            width: (@plone-left-toolbar-expanded + 18px); /* hide scroll bar */
             padding-right: 18px;
         }
     }
@@ -484,7 +484,7 @@ body.userrole-authenticated {
     .plone-toolbar-top-expanded { margin-top: 0px; }
 
     .plone-toolbar-container nav{
-        height: 90%;
+        height: 90%; /*walkaround: original at 100*/
         overflow-y: scroll;
     }
 }
