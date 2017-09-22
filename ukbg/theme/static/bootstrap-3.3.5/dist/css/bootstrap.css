@@ -11732,17 +11732,17 @@ label .required:after {
   /* overrides -1px used to get rid of unecessary scrollbar */
 }
 .picker__list-item:hover {
-  color: #333;
-  background: #f5f5f5;
+  color: #4d4d4d;
+  background: #f0f0f0;
 }
 .picker__list-item--highlighted:hover,
 .picker--focused .picker__list-item--highlighted {
   color: #fff;
-  background: #004994;
+  background: #007bb3;
 }
 li.picker__list-item {
-  padding: 5px 10px;
-  color: #555;
+  padding: 6px 12px;
+  color: #696969;
   cursor: pointer;
 }
 ul.picker__list {
@@ -11787,32 +11787,16 @@ ul.picker__list {
 .picker__day--infocus:hover,
 .picker__day--outfocus:hover {
   cursor: pointer;
-  background: #f5f5f5;
+  background: #f0f0f0;
 }
 .picker__day--highlighted:hover,
 .picker__day--highlighted {
   font-weight: 600;
   color: #fff;
-  background: #004994;
+  background: #007bb3;
 }
 .picker__day--outfocus {
-  color: #eee;
-}
-.pattern-pickadate-wrapper {
-  position: relative;
-  margin-bottom: .5em;
-}
-.pattern-pickadate-wrapper .pattern-pickadate-date-wrapper .picker__input {
-  width: 300px;
-  margin-bottom: .2em;
-  text-align: center;
-  cursor: context-menu;
-}
-.pattern-pickadate-wrapper .pattern-pickadate-time-wrapper .picker__input {
-  width: 180px;
-}
-.pattern-pickadate-wrapper .picker {
-  display: none;
+  color: #ccc;
 }
 .vevent span.cal_month {
   font-size: 1.1em;
