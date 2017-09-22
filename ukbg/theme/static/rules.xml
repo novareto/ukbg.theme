@@ -2,15 +2,15 @@
 <rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <notheme if-path="@@manage-viewlets"/>
-    <xi:include href="edit.xml"/>
+    <!--<xi:include href="edit.xml"/>-->
     <!-- The default theme, used for standard Plone web pages -->
     <theme href="index.html" css:if-content="#visual-portal-wrapper"/>
     <rules css:if-content="#visual-portal-wrapper">
 
         <prepend theme="html/head" css:content="html head base"/>
 
-        <!-- <drop css:theme="meta[http-equiv='Content-Type']"/>
-        <drop css:content="meta[name='viewport']"/>
+        <drop css:theme="meta[http-equiv='Content-Type']"/>
+        <!--<drop css:content="meta[name='viewport']"/>
         <drop css:content="link[href$='public.css']"/>
         <drop css:content="link[href$='columns.css']"/>
         <drop css:content="link[href$='portlets.css']"/>
@@ -27,9 +27,9 @@
         <drop css:content="link[href$='print.css']"/>
         <drop css:content="link[href$='mobile.css']"/>
         <drop css:content="link[href$='reset.css']"/>
-        <drop css:content="link[href$='base.css']"/>
+        <drop css:content="link[href$='base.css']"/>-->
         <drop css:content="link[href*='base-cachekey']"/>
-        <drop css:content="link[href*='reset-cachekey']"/> -->
+        <drop css:content="link[href*='reset-cachekey']"/>
 
         <drop css:content="link[href$='default.css']" />
 
@@ -37,10 +37,10 @@
         <replace theme="html head title" css:content="html head title"/>
 
         <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html head" content="/html/head/meta | /html/head/style | /html/head/link | /html/head/script"/>
+        <after css:theme-children="html head" content="/html/head/meta | /html/head/style | /html/head/link"/>
         <!-- Skip Links -->
         <!--<copy attributes="class id dir " content="/html/body" theme="html/body"/>-->
-        <copy attributes="*" content="/html/body" theme="html/body"/>
+        <copy attributes="*" content="/html/body" theme="/html/body"/>
 
         <!-- Plone 5 toolbar -->
         <replace css:theme="#edit-zone" css:content="#edit-zone" />
@@ -163,6 +163,9 @@
 
         <!-- Globalnav -->
         <replace css:content-children='#portal-globalnav' css:theme-children='.portal-globalnav'/>
+        <!--off-->
+
+
         <!-- Tab Gallery -->
         <replace css:content='#master-slider' css:theme='#master-slider'/>
         <!-- Etem HEader Bild -->

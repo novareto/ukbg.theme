@@ -11700,6 +11700,263 @@ label .required:after {
 .template-actions-controlpanel #content-core ol.configlets li {
   margin: 1.2em;
 }
+.pattern-pickadate-wrapper .pattern-pickadate-time-wrapper {
+  float: left;
+}
+.pattern-pickadate-wrapper .pattern-pickadate-time-wrapper .picker__input {
+  width: 180px;
+}
+.pattern-pickadate-wrapper .pattern-pickadate-date-wrapper .picker__holder {
+  width: 300px;
+}
+.picker--time {
+  min-width: 256px;
+  max-width: 320px;
+}
+#content .picker--opened .picker__holder {
+  opacity: 1;
+}
+.picker__holder {
+  width: 180px;
+  max-height: 300px;
+  margin: -1px 0 0 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  border: 1px solid #ccc;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .17);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, .17);
+}
+.picker__wrap {
+  margin: 0;
+  /* overrides -1px used to get rid of unecessary scrollbar */
+}
+.picker__list-item:hover {
+  color: #333;
+  background: #f5f5f5;
+}
+.picker__list-item--highlighted:hover,
+.picker--focused .picker__list-item--highlighted {
+  color: #fff;
+  background: #004994;
+}
+li.picker__list-item {
+  padding: 5px 10px;
+  color: #555;
+  cursor: pointer;
+}
+ul.picker__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  background: #fff;
+}
+.picker--time .picker__button--clear {
+  width: 100%;
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  border-radius: 0;
+}
+.picker__table {
+  width: 100%;
+  text-align: center;
+}
+.picker__table th {
+  text-align: center;
+}
+.picker__header {
+  position: relative;
+  text-align: center;
+}
+.picker__nav--next,
+.picker__nav--prev {
+  position: absolute;
+  top: .5em;
+}
+.picker__select--month,
+.picker__select--year {
+  display: inline-block;
+  width: 35%;
+  margin: 0 6px;
+  font-size: 1em;
+}
+.picker__day {
+  font-weight: 400;
+}
+.picker__day--infocus:hover,
+.picker__day--outfocus:hover {
+  cursor: pointer;
+  background: #f5f5f5;
+}
+.picker__day--highlighted:hover,
+.picker__day--highlighted {
+  font-weight: 600;
+  color: #fff;
+  background: #004994;
+}
+.picker__day--outfocus {
+  color: #eee;
+}
+.pattern-pickadate-wrapper {
+  position: relative;
+  margin-bottom: .5em;
+}
+.pattern-pickadate-wrapper .pattern-pickadate-date-wrapper .picker__input {
+  width: 300px;
+  margin-bottom: .2em;
+  text-align: center;
+  cursor: context-menu;
+}
+.pattern-pickadate-wrapper .pattern-pickadate-time-wrapper .picker__input {
+  width: 180px;
+}
+.pattern-pickadate-wrapper .picker {
+  display: none;
+}
+.vevent span.cal_month {
+  font-size: 1.1em;
+}
+.event.summary {
+  float: right;
+  max-width: 300px;
+  padding: 12px 12px 12px 36px;
+  margin-left: 5px;
+  font-weight: 400;
+  background: #fafafa;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
+}
+.event.summary strong,
+.event.summary li > span {
+  display: block;
+}
+.event_listing article {
+  padding: 12px 0 12px;
+  border-top: 1px solid #e5e5e5;
+}
+.event_listing article h2 {
+  padding: 12px 0 12px;
+  margin: 0;
+}
+.event_listing article:first-child {
+  margin-top: -6px;
+  border-top: 0;
+}
+.cal_date {
+  float: right;
+  width: 100px;
+  margin: 12px 0 12px 12px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
+}
+.cal_month {
+  display: block;
+  padding: 6px 12px;
+  font-weight: 400;
+  color: #fff;
+  background: #00afff;
+}
+.cal_day {
+  display: block;
+  font-size: 18px*2;
+  font-weight: 700;
+}
+.cal_wkday {
+  display: block;
+  padding: 0 12px 6px;
+  font-size: 12px;
+  font-weight: 300;
+}
+.event_listing .sub_nav {
+  float: right;
+}
+.template-event_listing .caltrigger {
+  display: none;
+}
+.autotabs .autotoc-nav .events-month-prev,
+.autotabs .autotoc-nav .events-week-prev,
+.autotabs .autotoc-nav .events-day-prev {
+  position: relative;
+  padding-left: 6px;
+  border-top-left-radius: 0;
+}
+.autotabs .autotoc-nav .events-month-prev:before,
+.autotabs .autotoc-nav .events-week-prev:before,
+.autotabs .autotoc-nav .events-day-prev:before {
+  position: absolute;
+  top: -1px;
+  left: -6px;
+  padding: 0 5px;
+  padding: 0 !important;
+  color: #e5e5e5;
+  content: "";
+  border-top: 23px solid transparent;
+  border-right: 5px solid;
+  border-bottom: 23px solid transparent;
+}
+.autotabs .autotoc-nav .events-month-prev:after,
+.autotabs .autotoc-nav .events-week-prev:after,
+.autotabs .autotoc-nav .events-day-prev:after {
+  position: absolute;
+  top: -1px;
+  left: -5px;
+  padding: 0 5px;
+  padding: 0 !important;
+  color: #fcfcfd;
+  content: "";
+  border-top: 23px solid transparent;
+  border-right: 5px solid;
+  border-bottom: 23px solid transparent;
+}
+.autotabs .autotoc-nav .events-month-prev:hover:after,
+.autotabs .autotoc-nav .events-week-prev:hover:after,
+.autotabs .autotoc-nav .events-day-prev:hover:after {
+  color: #fff;
+}
+.autotabs .autotoc-nav .events-month-next,
+.autotabs .autotoc-nav .events-week-next,
+.autotabs .autotoc-nav .events-day-next {
+  position: relative;
+  padding-right: 6px;
+  border-top-right-radius: 0;
+}
+.autotabs .autotoc-nav .events-month-next:before,
+.autotabs .autotoc-nav .events-week-next:before,
+.autotabs .autotoc-nav .events-day-next:before {
+  position: absolute;
+  top: -1px;
+  right: -6px;
+  padding: 0 5px;
+  padding: 0 !important;
+  color: #e5e5e5;
+  content: "";
+  border-top: 23px solid transparent;
+  border-bottom: 23px solid transparent;
+  border-left: 5px solid;
+}
+.autotabs .autotoc-nav .events-month-next:after,
+.autotabs .autotoc-nav .events-week-next:after,
+.autotabs .autotoc-nav .events-day-next:after {
+  position: absolute;
+  top: -1px;
+  right: -5px;
+  padding: 0 5px;
+  padding: 0 !important;
+  color: #fcfcfd;
+  content: "";
+  border-top: 23px solid transparent;
+  border-bottom: 23px solid transparent;
+  border-left: 5px solid;
+}
+.autotabs .autotoc-nav .events-month-next:hover:after,
+.autotabs .autotoc-nav .events-week-next:hover:after,
+.autotabs .autotoc-nav .events-day-next:hover:after {
+  color: #fff;
+}
 /*
  * Style tweaks
  * --------------------------------------------------
