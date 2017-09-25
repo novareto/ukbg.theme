@@ -1,31 +1,32 @@
 // portlet-navigation
 .portletNavigationTree {
-		margin-bottom: 15px;
-        ul {
-                padding:1em;
-                }
-        h4      {
-                border-bottom:0;
+    margin-bottom: 15px;
+    ul {
+        padding:1em;
         }
-        header {
-        display: block;
-        background: transparent;
-        background-image: none;
-        border: none;
-        height: 0.1em;
-        overflow: hidden;
-        padding: 0;
-        margin: -0.1em 0 0 -0.1em;
-        width: 1px;
-        }
+    h4 {
+        border-bottom:0;
+    }
+    header {
+    display: block;
+    background: transparent;
+    background-image: none;
+    border: none;
+    height: 0.1em;
+    overflow: hidden;
+    padding: 0;
+    margin: -0.1em 0 0 -0.1em;
+    width: 1px;
+    }
 }
+
 li.navTreeItem {
-        display:block;
-    	text-indent: -16px;
-    	padding:2px 4px 2px 16px;
-        border-top:1px solid @blue;
-        a {color:@gray-dark;
-	}
+    display:block;
+    text-indent: -16px;
+    padding:2px 4px 2px 16px;
+    border-top:1px solid @blue;
+    a {color:@gray-dark;
+}
 }
 
 li.navTreeItem a {
@@ -40,52 +41,52 @@ li.navTreeItem a {
 }
 
 li.navTreeItem:not(.navTreeItemInPath) a:hover:before {
-        padding-right:5px;
-        content: "\f0d7";
-        font-family: 'FontAwesome';
+    padding-right:5px;
+    content: "\f0d7";
+    font-family: 'FontAwesome';
 }
 li.navTreeItem.navTreeCurrentNode,
 #portletNavigation .portletItem li:hover:not(.navTreeItemInPath) {background:#fff;}
 li.navTreeItem.navTreeCurrentNode > div {display:initial;}
 li.navTreeItem a:hover {
-        color:@blue;
-        text-decoration:none !important;
-        }
+    color:@blue;
+    text-decoration:none !important;
+    }
 .navTreeCurrentItem {
-        color:@blue !important;
+    color:@blue !important;
 }
 .navTreeCurrentItem:last-child {
-        border-bottom:0;
+    border-bottom:0;
 }
 .navTreeLevel0 li.navTreeItem:last-child {
-        border-bottom:1px solid @blue;
-        }
+    border-bottom:1px solid @blue;
+    }
 .navTreeLevel1 li.navTreeItem:last-child,
 .navTreeLevel2 li.navTreeItem:last-child,
 .navTreeLevel3 li.navTreeItem:last-child {
-        border-bottom:0;
+    border-bottom:0;
 }
 li.navTreeItem a.contenttype-news-item:after {
-        background:none !important;
+    background:none !important;
 }
 // portal-sitemap navigation
 #portal-sitemap {
-        padding-left:0;
-        li > div {display:initial;}
-	li.navTreeItem:hover {background-color:transparent;} 
-	li.navTreeItem a:hover {color:#000 !important;}
-	ul, ul ul {padding-left:0px;}
+    padding-left:0;
+    li > div {display:initial;}
+li.navTreeItem:hover {background-color:transparent;}
+li.navTreeItem a:hover {color:#000 !important;}
+ul, ul ul {padding-left:0px;}
 }
 
 @media all and (min-width: @screen-md) {
-   .row-offcanvas,
-   .nva-mobilenavigation {
-	display: none;
-   }
+    .row-offcanvas,
+    .nva-mobilenavigation {
+        display: none;
+    }
 }
 
 #portal-column-offcanvas {
-  background-color: @blueLighter;
+    background-color: @blueLighter;
 }
 
 .secondary-navigation {

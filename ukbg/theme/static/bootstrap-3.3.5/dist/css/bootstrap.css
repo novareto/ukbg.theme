@@ -11841,6 +11841,69 @@ label .required:after {
 .autotabs .autotoc-nav .events-day-next:hover:after {
   color: #fff;
 }
+.standalone,
+[type="submit"],
+button {
+  color: #4d4d4d;
+}
+.picker__button--today::before,
+.picker__button--clear::before,
+.picker__button--close::before {
+  position: relative;
+  display: inline-block;
+  height: 0;
+}
+.pattern-pickadate-wrapper .pattern-pickadate-date-wrapper .picker__holder {
+  font-size: 12px;
+}
+.picker__button--today,
+.picker__button--clear,
+.picker__button--close {
+  display: inline-block;
+  width: 33%;
+  padding: .66em 0;
+  font-size: .8em;
+  font-size: 12px;
+  font-weight: bold;
+  vertical-align: bottom;
+  background: #fff;
+  border: 1px solid #fff;
+}
+.picker__button--today:hover,
+.picker__button--clear:hover,
+.picker__button--close:hover {
+  color: #000;
+  cursor: pointer;
+  background: #e2eef8;
+  border-bottom-color: #e2eef8;
+}
+.picker__button--today::before {
+  top: -.05em;
+  width: 0;
+  border-top: .66em solid #0059bc;
+  border-left: .66em solid transparent;
+}
+.picker__button--today::before,
+.picker__button--clear::before {
+  margin-right: .45em;
+  content: " ";
+}
+.picker__button--clear::before {
+  top: -.25em;
+  width: .66em;
+  border-top: 3px solid #e20;
+}
+.picker__button--close::before {
+  top: -.1em;
+  margin-right: .35em;
+  font-size: 1.1em;
+  color: #777;
+  vertical-align: top;
+  content: "\D7";
+}
+.pattern-pickadate-wrapper .picker.picker--opened {
+  display: block;
+}
 .pattern-pickadate-wrapper .pattern-pickadate-time-wrapper {
   float: left;
 }

@@ -1,6 +1,68 @@
 //*// PICK A DATE //*//
+.standalone, [type="submit"], button {
+    color: #4d4d4d;
+}
+.picker__button--today::before, .picker__button--clear::before, .picker__button--close::before {
+    position: relative;
+    display: inline-block;
+    height: 0;
+}
+
+.pattern-pickadate-wrapper .pattern-pickadate-date-wrapper .picker__holder {
+    font-size: 12px;
+}
+
+.picker__button--today, .picker__button--clear, .picker__button--close {
+    border: 1px solid #fff;
+    background: #fff;
+    font-size: .8em;
+    padding: .66em 0;
+    font-weight: bold;
+    width: 33%;
+    display: inline-block;
+    vertical-align: bottom;
+    font-size: 12px;
+
+    &:hover{
+    cursor: pointer;
+    color: #000;
+    background: @blueLighter;
+    border-bottom-color: @blueLighter;
+  }
+}
+
+.picker__button--today::before {
+    top: -0.05em;
+    width: 0;
+    border-top: .66em solid #0059bc;
+    border-left: .66em solid transparent;
+}
+
+.picker__button--today::before, .picker__button--clear::before {
+    content: " ";
+    margin-right: .45em;
+}
+
+.picker__button--clear::before {
+    top: -0.25em;
+    width: .66em;
+    border-top: 3px solid #e20;
+}
+
+.picker__button--close::before {
+    content: "\D7";
+    top: -0.1em;
+    vertical-align: top;
+    font-size: 1.1em;
+    margin-right: .35em;
+    color: #777;
+}
 
 .pattern-pickadate-wrapper {
+  .picker.picker--opened {
+    display: block;
+  }
+
   .pattern-pickadate-time-wrapper {
     float:left;
     .picker__input {
