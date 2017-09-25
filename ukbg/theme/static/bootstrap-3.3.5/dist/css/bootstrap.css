@@ -7916,12 +7916,6 @@ span.image-caption {
   .portletBlueLinePortlet .bl-portletItem a {
     line-height: 2em;
   }
-  .portletEventsPortlet ul li {
-    border-bottom: 0 !important;
-  }
-  .portletEventsPortlet ul li:last-child {
-    border-bottom: 1px solid #9cf !important;
-  }
   .portletRss > div .portletItem {
     padding: 6px 0;
     line-height: 20px;
@@ -8361,7 +8355,7 @@ ul.listTypeSquare li {
 }
 a.newsItem:hover,
 .media:hover,
-.portletEventsPortlet ul:hover {
+.portletEvents ul:hover {
   background: #f6f6f6;
 }
 .discreet {
@@ -8734,10 +8728,9 @@ li.divider-vertical:last-child {
   border-right: 1px solid #e2eef8;
   border-left: 1px solid #004994;
 }
-/*
-// personal-tools
+/* personal-tools
 #portal-personaltools {
-    position: absolute;
+    //position: absolute;
     z-index: 3;
     top: -3px;
     padding: 0.1em 0.5em;
@@ -8751,8 +8744,7 @@ li.divider-vertical:last-child {
     top:-20px;
     left:86% !important;
     }
-}
-*/
+}*/
 .pattern-math {
   padding-top: 80px;
   padding-bottom: 80px;
@@ -9619,6 +9611,12 @@ a.event-location {
 .nav-list .portletItem li {
   padding-left: 10px !important;
   text-indent: -1px !important;
+}
+.portletEvents ul li {
+  border-bottom: 0 !important;
+}
+.portletEvents ul li:last-child {
+  border-bottom: 1px solid #9cf !important;
 }
 .portletNews a:after {
   width: 16px;
