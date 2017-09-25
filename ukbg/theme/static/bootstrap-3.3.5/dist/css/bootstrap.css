@@ -8314,8 +8314,6 @@ h1 {
 }
 p,
 ul,
-section.portlet h4,
-.portlet-column h4,
 .panel-heading h4 {
   font-family: "DGUVMetaWeb-Normal", sans-serif;
 }
@@ -8364,16 +8362,14 @@ ul.listTypeSquare li {
   margin-bottom: 10px;
 }
 a.newsItem:hover,
-.media:hover,
-.portletEvents ul:hover {
+.media:hover {
   background: #f6f6f6;
 }
 .discreet {
   font-size: 80%;
   color: grey;
 }
-#content .callout,
-.portletStaticText .callout {
+#content .callout {
   padding: 1em;
   clear: both;
   background: #eee;
@@ -8567,17 +8563,6 @@ a.tile {
   .fa-plus-square:before {
     padding-right: 10px;
   }
-  .portlet-column {
-    margin-top: 15px;
-  }
-}
-@media (max-width: 991px) {
-  .fa-plus-square:before {
-    padding-right: 10px;
-  }
-  .portlet-column {
-    margin-top: 15px;
-  }
 }
 .carousel-caption {
   position: absolute;
@@ -8617,92 +8602,6 @@ a.tile {
 .carousel-control.left,
 .carousel-control.right {
   background-image: none;
-}
-.portlet-column p {
-  padding: 0 10px;
-}
-.portletLogin,
-.portletCollection,
-.portletEvents,
-.portlet-column .portlet,
-section.portlet {
-  margin: 0 10px 15px 10px;
-  background: #fff;
-  border: 1px solid #ebebeb;
-}
-.portletLogin .portletHeader,
-.portletCollection .portletHeader,
-.portletEvents .portletHeader,
-.portlet-column h4 {
-  padding-right: 10px;
-  padding-left: 10px;
-  margin: 5px 0 !important;
-  font-weight: bold;
-  line-height: 1.4em;
-  color: #09c;
-  border-bottom: 1px solid #ebebeb;
-}
-.portletLogin .portletHeader a,
-.portletCollection .portletHeader a,
-.portletEvents .portletHeader a,
-.portlet-column h4 a {
-  color: #09c !important;
-}
-.portletStichwort,
-.portletNews > div,
-.portletCollection > div {
-  margin-left: 5px;
-}
-.portletNews div > div,
-.portletCollection div > div {
-  padding-right: 5px;
-  margin-bottom: 5px;
-  line-height: 20px;
-}
-.portletLogin .portletHeader,
-.portletCollection .portletHeader {
-  font-size: 17px;
-}
-.portletLogin .portletItem,
-.portletCollection .portletItem {
-  margin-right: 10px;
-  margin-bottom: 10px;
-  margin-left: 13px;
-  text-indent: -13px;
-}
-.portletLogin label {
-  margin-left: 10px;
-}
-.newsPromotion ul,
-.portlet-column ul,
-ul.portletContent,
-section.portletContent ul {
-  padding-left: 0;
-  margin-bottom: 0;
-  margin-left: 0;
-  list-style-type: none;
-}
-.portletRss a,
-.portlet-column h4 a,
-.portletNews a,
-.portletCollection a,
-.portlet-column p,
-.portlet-column p a,
-.portlet-column ul li a {
-  line-height: 20px;
-  color: #333;
-}
-.list-group.portletItem li,
-.portletRss > div {
-  padding-right: 10px;
-  margin-left: 21px;
-  text-indent: -12px;
-}
-.portletItem a.tile {
-  width: 24px;
-  height: 24px;
-  padding-left: 12px;
-  background-position: -20px -318px;
 }
 #portal-breadcrumbs span {
   color: #9a9a9a;
@@ -8825,13 +8724,6 @@ li.divider-vertical:last-child {
 #tabCarousel h3 {
   margin-top: 0;
   color: #09c;
-}
-.managePortletsLink {
-  padding: 10px;
-}
-.eventDetails {
-  margin: 10px 0;
-  background: #f5f5f5;
 }
 h3.newsDescription {
   margin-top: 0;
@@ -9621,7 +9513,7 @@ a.event-more,
 a.event-location {
   padding-left: 11px;
 }
-section.portlet {
+.portlet-column {
   clear: both;
 }
 .nav-list .portletItem li {
