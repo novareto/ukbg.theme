@@ -6848,23 +6848,23 @@ button.close {
   padding-left: 18px;
   font-family: "DGUVMetaWeb-Normal";
 }
-#content-core ul {
+#content-core div[id*='-fieldname-'] ul {
   padding-left: 0;
   list-style-type: none;
 }
-#content-core ul li {
+#content-core div[id*='-fieldname-'] ul li {
   padding-bottom: 4px;
   padding-left: 18px;
   text-indent: -18px;
 }
-#content-core ul li:before {
+#content-core div[id*='-fieldname-'] ul li:before {
   padding-right: 12px;
   font-size: 14px;
   color: #004994;
   content: "•";
 }
-#content-core ul > ul,
-#content-core ul > ul > ul {
+#content-core div[id*='-fieldname-'] ul > ul,
+#content-core div[id*='-fieldname-'] ul > ul > ul {
   padding-left: 22px;
 }
 #content-core ul.navTreeLevel0 li:before {
@@ -7095,8 +7095,8 @@ div.overlay div.close,
 .tileFooter span,
 .pfeilmehr,
 .searchField,
-a.external-link,
-a.internal-link,
+a[data-linktype="external"],
+a[data-linktype="internal"],
 .portletItem a.tile,
 a.event-link,
 a.event-more,
@@ -7163,14 +7163,14 @@ a.top:after {
 }
 a.event-more,
 a.event-link,
-a.internal-link,
+a[data-linktype="internal"],
 .link-Icons {
   width: 24px;
   height: 24px;
   background-position: -20px -318px;
 }
 a.event-link,
-a.internal-link {
+a[data-linktype="internal"] {
   padding-left: 12px;
 }
 a.external-link,
@@ -7244,22 +7244,31 @@ li.listItem a:before {
   font-size: 14px;
   content: "\f0da";
 }
-#content-core ul.pagination li {
-  padding-left: inherit;
-  text-indent: inherit;
+/*
+
+// fix pagination ul
+#content-core ul.pagination {
+    li {
+        text-indent: inherit;
+        padding-left: inherit;
+        }
+    li::before {
+        content: none;
+    }
 }
-#content-core ul.pagination li::before {
-  content: none;
-}
-#content-core .pat-select2 ul li,
-#content-core .pat-relateditems ul li {
-  padding-bottom: .25rem;
-  text-indent: inherit;
-}
-#content-core .pat-select2 ul li::before,
-#content-core .pat-relateditems ul li::before {
-  content: none;
-}
+
+// fix pat-select2 rendering
+#content-core .pat-select2 ul,
+#content-core .pat-relateditems ul {
+    li {
+        text-indent: inherit;
+        padding-bottom: 0.25rem;
+    }
+    li::before {
+        content: none;
+    }
+
+}*/
 #mobile-site-action {
   position: relative;
   z-index: 32;
@@ -8305,6 +8314,7 @@ h1 {
 }
 p,
 ul,
+section.portlet h4,
 .portlet-column h4,
 .panel-heading h4 {
   font-family: "DGUVMetaWeb-Normal", sans-serif;
@@ -8611,15 +8621,18 @@ a.tile {
 .portlet-column p {
   padding: 0 10px;
 }
-dl.portletLogin,
-dl.portletCollection,
-.portlet-column .portlet {
+.portletLogin,
+.portletCollection,
+.portletEvents,
+.portlet-column .portlet,
+section.portlet {
   margin: 0 10px 15px 10px;
   background: #fff;
   border: 1px solid #ebebeb;
 }
-dl.portletLogin .portletHeader,
-dl.portletCollection .portletHeader,
+.portletLogin .portletHeader,
+.portletCollection .portletHeader,
+.portletEvents .portletHeader,
 .portlet-column h4 {
   padding-right: 10px;
   padding-left: 10px;
@@ -8629,8 +8642,9 @@ dl.portletCollection .portletHeader,
   color: #09c;
   border-bottom: 1px solid #ebebeb;
 }
-dl.portletLogin .portletHeader a,
-dl.portletCollection .portletHeader a,
+.portletLogin .portletHeader a,
+.portletCollection .portletHeader a,
+.portletEvents .portletHeader a,
 .portlet-column h4 a {
   color: #09c !important;
 }
@@ -8645,22 +8659,24 @@ dl.portletCollection .portletHeader a,
   margin-bottom: 5px;
   line-height: 20px;
 }
-dl.portletLogin .portletHeader,
-dl.portletCollection .portletHeader {
+.portletLogin .portletHeader,
+.portletCollection .portletHeader {
   font-size: 17px;
 }
-dl.portletLogin .portletItem,
-dl.portletCollection .portletItem {
+.portletLogin .portletItem,
+.portletCollection .portletItem {
   margin-right: 10px;
   margin-bottom: 10px;
   margin-left: 13px;
   text-indent: -13px;
 }
-dl.portletLogin label {
+.portletLogin label {
   margin-left: 10px;
 }
 .newsPromotion ul,
-.portlet-column ul {
+.portlet-column ul,
+ul.portletContent,
+section.portletContent ul {
   padding-left: 0;
   margin-bottom: 0;
   margin-left: 0;
@@ -9605,7 +9621,7 @@ a.event-more,
 a.event-location {
   padding-left: 11px;
 }
-.portlet-column {
+section.portlet {
   clear: both;
 }
 .nav-list .portletItem li {

@@ -68,7 +68,7 @@ h1 {color:@blue;}
     color:@white;
     font-size:@font-size-h4;
     }
-p, ul, .portlet-column h4, .panel-heading h4 {
+p, ul, section.portlet h4,.portlet-column h4, .panel-heading h4 {
     font-family: @dguv-normal-font-name, sans-serif;
 }
 ul.listTypeSquare {
@@ -357,15 +357,20 @@ filter:none;
 .portlet-column p {
     padding:0 10px;
     }
-dl.portletLogin,
-dl.portletCollection,
-.portlet-column .portlet {
+
+.portletLogin,
+.portletCollection,
+.portletEvents,
+.portlet-column .portlet,
+section.portlet {
     background:@white;
     border:1px solid @collapseBg;
     margin:0px 10px 15px 10px;
 }
-dl.portletLogin .portletHeader,
-dl.portletCollection .portletHeader,
+
+.portletLogin .portletHeader,
+.portletCollection .portletHeader,
+.portletEvents .portletHeader,
 .portlet-column h4 {
     color:@bluehover;
     font-weight:bold;
@@ -388,8 +393,8 @@ dl.portletCollection .portletHeader,
     padding-right: 5px;
     margin-bottom:5px;
     }
-dl.portletLogin,
-dl.portletCollection {
+.portletLogin,
+.portletCollection {
     .portletHeader {font-size: @font-size-h4;}
     .portletItem {
     margin-left: 13px;
@@ -398,11 +403,13 @@ dl.portletCollection {
     margin-bottom:10px;
     }
 }
-dl.portletLogin {
+.portletLogin {
     label {margin-left:10px}
     }
 .newsPromotion ul,
-.portlet-column ul {
+.portlet-column ul,
+ul.portletContent,
+section.portletContent ul{
     list-style-type: none;
     padding-left:0;
     margin-left:0;

@@ -2,6 +2,9 @@
     p~ul {overflow:hidden;}
     dd {padding-bottom: 4px;font-family: "DGUVMetaWeb-Normal";}
     ol {padding-left:18px;font-family: "DGUVMetaWeb-Normal";}
+}
+
+#content-core div[id*='-fieldname-'] {
     ul {
     list-style-type:none;
     padding-left:0;
@@ -19,6 +22,7 @@
     > ul, > ul > ul {padding-left:22px;}
     }
 }
+
 #content-core ul.navTreeLevel0 li:before {content:initial;}
 
 .download-link {
@@ -232,8 +236,8 @@ div.overlay div.close,
 .tileFooter span,
 .pfeilmehr,
 .searchField,
-a.external-link,
-a.internal-link,
+a[data-linktype="external"],
+a[data-linktype="internal"],
 .portletItem a.tile,
 a.event-link,
 a.event-more,
@@ -310,7 +314,7 @@ a.top:after {
 }
 a.event-more,
 a.event-link,
-a.internal-link,
+a[data-linktype="internal"],
 .link-Icons{
     background-position: -20px -318px ;
     width: 24px;
@@ -318,7 +322,7 @@ a.internal-link,
 }
 
 a.event-link,
-a.internal-link {
+a[data-linktype="internal"] {
     padding-left:12px;
     }
 a.external-link,
@@ -392,7 +396,7 @@ li.listItem {
         }
 }
 
-
+/*
 
 // fix pagination ul
 #content-core ul.pagination {
@@ -416,4 +420,4 @@ li.listItem {
         content: none;
     }
 
-}
+}*/
