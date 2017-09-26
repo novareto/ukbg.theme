@@ -250,6 +250,7 @@
                 <div class="row maincolumn">
                     <div class="col-md-12">
                         <xsl:apply-templates select="//div[@id='edit-bar']"/>
+                        <xsl:apply-templates select="//section[@id='viewlet-above-content']"/>
                         <section>
                             <xsl:if test="//aside[contains(@class, 'nva-mobilenavigation')]">
                                 <p class="pull-right secondary-navigation">
