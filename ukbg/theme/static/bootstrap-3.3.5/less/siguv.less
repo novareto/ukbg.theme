@@ -9,15 +9,27 @@ body {
     background-color:#6d9ac1;
     }
 
-#wrap {
+.wrap {
     background:@blueLighter;
     padding-top:15px;
-.maincolumn   {
-    border-bottom:1px solid @blue;
-    background:white;
-    }
-}
+    margin-left:0;
+    margin-right:0;
 
+    .maincolumn   {
+        border-bottom:1px solid @blue;
+        background:white;
+        }
+}
+.wrap {
+  -webkit-transition: all 0.3s ease-out;  
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+//.wrap.active {
+//  left: 18em;
+//}
 // END
 // fonts
 @font-face {
@@ -105,11 +117,6 @@ ul.listTypeSquare {
 }
 }
 
-.breadcrumb {
-    padding-top: 5px;
-    margin-bottom: 0px;
-    margin-right:5px;
-    }
 .list-group {
     margin-bottom: 10px;
 }
@@ -168,7 +175,7 @@ a.tile {
         padding: 4px 8px 6px;}
     }
 .navbar .nav > li:first-child {
-    margin-left:-6px;}
+    margin-left:-13px;}
 .navbar-default .navbar-inner {
     background-color: @blue;
     background-image: none;
@@ -346,15 +353,57 @@ filter:none;
 .carousel-control.right {background-image:none;}
 
 // breadcrumbs
-#portal-breadcrumbs span {
+
+nav.plone-breadcrumb {
+    display:block;
+    clear:left;
+    border-radius: 0px;
+    margin:0 10px 0 0;
+    padding:5px 0 0 0;
+    .container {width:100%;padding-left:0;}
+    span {
     color:@fontLighter;
     }
-.breadcrumb {
-    border-radius: 0px;
-    margin-right: 10px;
-    margin-bottom: 5px !important;
-    padding-left:10px !important;
+    ol {
+    padding-left:0;
+    list-style-type: none;
+    display: inline-block;
+
+        li {
+        display: inline-block;
+        line-height: 0;
+        position: relative;
+        padding: 0 10px 0 0;
+
+        + li:after {
+            content: "/";
+            position: absolute;
+            padding:0 5px;
+            color: @fontLighter;
+            left: -11px;
+            top: 0px;
+            padding: 0 !important;
+            }
+
+        + li:before {
+            content: "/";
+            position: absolute;
+            padding:0 5px;
+            color: @fontLighter;
+            left: -10px;
+            top: 0px;
+            padding: 0 !important;
+            }
+            a {
+                color: @blue;
+                }
+            > #breadcrumbs-current {
+                color: @fontLighter;
+            }
+        }
     }
+}
+
 // site-action nav
 #site-action {
     padding-right:0px;
