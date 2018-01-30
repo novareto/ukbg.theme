@@ -4,8 +4,6 @@
        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <notheme if-path="@@manage-viewlets"/>
-
     <xi:include href="++theme++barceloneta/backend.xml" />
 
     <!--<xi:include href="edit.xml"/>-->
