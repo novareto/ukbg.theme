@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xi="http://www.w3.org/2001/XInclude">
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <notheme if-path="@@manage-viewlets"/>
-    <!--<xi:include href="edit.xml"/>-->
-    <!-- The default theme, used for standard Plone web pages -->
-    <theme href="index.html" css:if-content="#visual-portal-wrapper"/>
-    <rules css:if-content="#visual-portal-wrapper">
+    <!-- Include the backend theme -->
+    <xi:include href="++theme++barceloneta/backend.xml" />
+
+    <rules css:if-content="body.viewpermission-view, body.viewpermission-none">>
+        <theme href="index.html" />
 
         <prepend theme="html/head" css:content="html head base"/>
 
         <drop css:theme="meta[http-equiv='Content-Type']"/>
-        <!--<drop css:content="meta[name='viewport']"/>
-        <drop css:content="link[href$='public.css']"/>
-        <drop css:content="link[href$='columns.css']"/>
-        <drop css:content="link[href$='portlets.css']"/>
-        <drop css:content="link[href$='discussion.css']"/>
-        <drop css:content="link[href$='ploneKss.css']"/>
-        <drop css:content="link[href$='deprecated.css']"/>
-        <drop css:content="link[href$='navtree.css']"/>
-        <drop css:content="link[href$='authoring.css']"/>
-        <drop css:content="link[href$='invisibles.css']"/>
-        <drop css:content="link[href$='ploneCustom.css']"/>
-        <drop css:content="link[href$='tabrtabs.css']"/>
-        <drop css:content="link[href$='controlpanel.css']"
-        <drop css:content="link[href$='member.css']"/>
-        <drop css:content="link[href$='print.css']"/>
-        <drop css:content="link[href$='mobile.css']"/>
-        <drop css:content="link[href$='reset.css']"/>
-        <drop css:content="link[href$='base.css']"/>-->
+
         <drop css:content="link[href*='base-cachekey']"/>
         <drop css:content="link[href*='reset-cachekey']"/>
 
@@ -41,9 +27,6 @@
         <!-- Skip Links -->
         <!--<copy attributes="class id dir " content="/html/body" theme="html/body"/>-->
         <copy attributes="*" content="/html/body" theme="/html/body"/>
-
-        <!-- Plone 5 toolbar -->
-        <replace css:theme="#edit-zone" css:content="#edit-zone" />
 
         <!-- TEMP RULE -->
         <before css:content="#master-slider-container" css:theme="#main"/>
