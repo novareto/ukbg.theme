@@ -23,7 +23,7 @@
         <replace theme="html head title" css:content="html head title"/>
 
         <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html head" content="/html/head/meta | /html/head/style | /html/head/link" if-not-path="@@overview-controlpanel"/>
+        <after css:theme-children="html head" content="/html/head/meta | /html/head/style | /html/head/link" />
         <!-- Skip Links -->
         <!--<copy attributes="class id dir " content="/html/body" theme="html/body"/>-->
         <copy attributes="*" content="/html/body" theme="/html/body"/>
