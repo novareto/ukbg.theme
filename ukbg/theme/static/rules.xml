@@ -17,8 +17,7 @@
         <drop css:content="link[href*='base-cachekey']"/>
         <drop css:content="link[href*='reset-cachekey']"/>
 
-
-        <drop css:content="link[href$='default.css']" if-not-path="@@overview-controlpanel"/>
+        <drop css:content="link[href$='default.css']"/>
 
         <!-- Head elements -->
         <replace theme="html head title" css:content="html head title"/>
