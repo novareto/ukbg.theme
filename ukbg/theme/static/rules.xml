@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rules xmlns="http://namespaces.plone.org/diazo" xmlns:css="http://namespaces.plone.org/diazo/css" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xi="http://www.w3.org/2001/XInclude">
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <notheme if-path="@@manage-viewlets"/>
+
+    <xi:include href="++theme++barceloneta/backend.xml" />
+
     <!--<xi:include href="edit.xml"/>-->
     <!-- The default theme, used for standard Plone web pages -->
-    <theme href="index.html" css:if-content="#visual-portal-wrapper"/>
+    <theme href="index.html" css:if-content="body.frontend#visual-portal-wrapper"/>
     <rules css:if-content="#visual-portal-wrapper">
 
         <prepend theme="html/head" css:content="html head base"/>
@@ -31,13 +37,14 @@
         <drop css:content="link[href*='base-cachekey']"/>
         <drop css:content="link[href*='reset-cachekey']"/>
 
-        <drop css:content="link[href$='default.css']" />
+
+        <drop css:content="link[href$='default.css']" if-not-path="@@overview-controlpanel"/>
 
         <!-- Head elements -->
         <replace theme="html head title" css:content="html head title"/>
 
         <!-- Copy script tags from Plone head to end of body -->
-        <after css:theme-children="html head" content="/html/head/meta | /html/head/style | /html/head/link"/>
+        <after css:theme-children="html head" content="/html/head/meta | /html/head/style | /html/head/link" if-not-path="@@overview-controlpanel"/>
         <!-- Skip Links -->
         <!--<copy attributes="class id dir " content="/html/body" theme="html/body"/>-->
         <copy attributes="*" content="/html/body" theme="/html/body"/>
