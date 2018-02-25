@@ -42,8 +42,7 @@ footer {
 
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -70%; /* 6 columns */
-    background:white;
+    left: -72%; /* 6 columns */
     z-index:9299;
   }
 

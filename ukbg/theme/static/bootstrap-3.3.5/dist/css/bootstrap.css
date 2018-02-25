@@ -8180,7 +8180,7 @@ span.image-caption {
     border: 0;
   }
   .navbar .nav > li {
-    border-right: 0;
+    border-right: 1px solid transparent;
   }
   .img-caption {
     padding: 0 10px;
@@ -8475,7 +8475,7 @@ a.tile {
   #side-menu ul {
     display: block;
     margin-right: 5px;
-    margin-left: -15px !important;
+    margin-left: 10px;
     list-style-type: none;
   }
   #side-menu li.navTreeItem a:hover {
@@ -10594,9 +10594,8 @@ footer {
 
   .row-offcanvas-left
   .sidebar-offcanvas {
-    left: -70%; /* 6 columns */
+    left: -72%; /* 6 columns */
     z-index: 9299;
-    background: white;
   }
 
   .row-offcanvas-left:not(.active)
