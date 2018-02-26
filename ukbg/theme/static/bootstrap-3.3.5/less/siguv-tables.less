@@ -20,7 +20,10 @@ table td img {
 }
 .table-condensed > tbody > tr:first-child,
 .table-responsive caption,
-.table-striped thead {
+.table-striped thead,
+.table-striped th,
+.table-bordered thead,
+.table-hover thead {
         background-color:@blue !important;
         margin:0;
         padding:10px;
@@ -29,6 +32,12 @@ table td img {
 .table thead th {
   vertical-align: top;
   }
+.eventDetails {
+        .table-striped th {
+                background-color:transparent !important;
+                color: initial !important;
+                }
+}
 .table-responsive caption,
 .table-striped caption,
 .table th {

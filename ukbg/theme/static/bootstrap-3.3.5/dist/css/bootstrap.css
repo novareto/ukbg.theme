@@ -8180,7 +8180,7 @@ span.image-caption {
     border: 0;
   }
   .navbar .nav > li {
-    border-right: 1px solid transparent;
+    border-right: 0 !important;
   }
   .img-caption {
     padding: 0 10px;
@@ -9032,7 +9032,10 @@ table td img {
 }
 .table-condensed > tbody > tr:first-child,
 .table-responsive caption,
-.table-striped thead {
+.table-striped thead,
+.table-striped th,
+.table-bordered thead,
+.table-hover thead {
   padding: 10px;
   margin: 0;
   background-color: #004994 !important;
@@ -9042,6 +9045,10 @@ table td img {
 }
 .table thead th {
   vertical-align: top;
+}
+.eventDetails .table-striped th {
+  color: initial !important;
+  background-color: transparent !important;
 }
 .table-responsive caption,
 .table-striped caption,
