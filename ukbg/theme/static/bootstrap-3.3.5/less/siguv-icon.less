@@ -25,6 +25,17 @@
 
 #content-core ul.navTreeLevel0 li:before {content:initial;}
 
+.internal-link:before {
+	content: "\f061";
+	font:normal normal normal 10px/1 FontAwesome;
+        padding-right: 6px;
+	}
+.link-https:before,
+.link-external:before {
+        content: "\f08e";
+        font:normal normal normal 12px/1 FontAwesome;
+        padding-right: 6px;
+        }
 .download-link {
     display:inline-block;
     font:normal normal normal 14px/1 FontAwesome;
@@ -423,3 +434,4 @@ li.listItem {
     }
 
 }*/
+
