@@ -84,5 +84,8 @@
       "fonts",
       "js"
     ]
+  },
+  "dependencies": {
+    "bower": "^1.8.4"
   }
 }

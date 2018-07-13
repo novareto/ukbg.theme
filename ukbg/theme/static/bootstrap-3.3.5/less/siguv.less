@@ -21,7 +21,7 @@ body {
         }
 }
 .wrap {
-  -webkit-transition: all 0.3s ease-out;  
+  -webkit-transition: all 0.3s ease-out;
   -moz-transition: all 0.3s ease-out;
   -ms-transition: all 0.3s ease-out;
   -o-transition: all 0.3s ease-out;
@@ -81,7 +81,7 @@ h1 {color:@blue;}
     font-size:@font-size-h4;
     }
 
-p, ul, 
+p, ul,
 .panel-heading h4 {
     font-family: @dguv-normal-font-name, sans-serif;
 }
@@ -544,3 +544,102 @@ h3.newsDescription {
     }
 
 }
+
+.cal_date {
+	float: right;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
+	text-align: center;
+	width: 100px;
+	margin: 12px 0 12px 12px;
+	border-radius: 4px;
+	overflow: hidden;
+}
+
+.vevent div.cal_date {
+	float: left;
+	vertical-align: top;
+	text-align: center;
+	margin: 42px 1.5em .5em 0;
+	background-color: #fff;
+	border-radius: .5em;
+	min-width: 4.4em;
+}
+
+article.vevent a.event_ical img {
+ vertical-align:baseline;
+ height:1em;
+ width:auto;
+ color:#007bb3
+}
+.vevent div.cal_date {
+ float:left;
+ vertical-align:top;
+ text-align:center;
+ margin:42px 1.5em .5em 0;
+ background-color:#fff;
+ border-radius:.5em;
+ min-width:4.4em
+}
+.vevent span.cal_wkday {
+ display:block;
+ font-size:1em;
+ font-weight:normal;
+ padding-bottom:.3em
+}
+.vevent span.cal_day {
+ font-size:1.7em;
+ display:block;
+ padding-top:.3em
+}
+.vevent span.cal_month {
+ font-size:1.1em;
+ line-height:1.3em;
+ background:@blue;
+ display:block
+}
+.vevent div.cal_info {
+ margin-left:9em
+}
+#content .vevent ul.metadata {
+ margin:.8em 0
+}
+#content .vevent ul.horizontal {
+ padding:0
+}
+#content .vevent ul.horizontal li {
+ display:inline-block;
+ line-height:1.5em;
+ list-style-image:none;
+ list-style-type:none
+}
+.vevent .horizontal.metadata li:after {
+ content:" "
+}
+.vevent .horizontal.metadata li:last-child:after {
+ content:""
+}
+.vevent .horizontal.metadata .category span:after {
+ content:","
+}
+.vevent .horizontal.metadata .category span:last-child:after {
+ content:""
+}
+.vevent .timezone {
+ display:block;
+ margin-top:.5em;
+ padding:.2em 0;
+ background-color:#ffe;
+ color:#354;
+ width:100%
+}
+.vevent .timerange,.vevent .timezone {
+ font-size:85%;
+ line-height:1em;
+ white-space:nowrap
+}
+.vevent .datedisplay {
+ line-height:1.5em;
+ margin-bottom:.2em;
+ font-size:100%
+}
+

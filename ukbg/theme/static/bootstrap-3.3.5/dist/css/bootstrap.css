@@ -8794,6 +8794,103 @@ h3.newsDescription {
   margin-top: -1em;
   text-align: right;
 }
+.cal_date {
+  float: right;
+  width: 100px;
+  margin: 12px 0 12px 12px;
+  overflow: hidden;
+  text-align: center;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
+}
+.vevent div.cal_date {
+  float: left;
+  min-width: 4.4em;
+  margin: 42px 1.5em .5em 0;
+  text-align: center;
+  vertical-align: top;
+  background-color: #fff;
+  border-radius: .5em;
+}
+article.vevent a.event_ical img {
+  width: auto;
+  height: 1em;
+  color: #007bb3;
+  vertical-align: baseline;
+}
+.vevent div.cal_date {
+  float: left;
+  min-width: 4.4em;
+  margin: 42px 1.5em .5em 0;
+  text-align: center;
+  vertical-align: top;
+  background-color: #fff;
+  border-radius: .5em;
+}
+.vevent span.cal_wkday {
+  display: block;
+  padding-bottom: .3em;
+  font-size: 1em;
+  font-weight: normal;
+}
+.vevent span.cal_day {
+  display: block;
+  padding-top: .3em;
+  font-size: 1.7em;
+}
+.vevent span.cal_month {
+  display: block;
+  font-size: 1.1em;
+  line-height: 1.3em;
+  background: #004994;
+}
+.vevent div.cal_info {
+  margin-left: 9em;
+}
+#content .vevent ul.metadata {
+  margin: .8em 0;
+}
+#content .vevent ul.horizontal {
+  padding: 0;
+}
+#content .vevent ul.horizontal li {
+  display: inline-block;
+  line-height: 1.5em;
+  list-style-type: none;
+  list-style-image: none;
+}
+.vevent .horizontal.metadata li:after {
+  content: " ";
+}
+.vevent .horizontal.metadata li:last-child:after {
+  content: "";
+}
+.vevent .horizontal.metadata .category span:after {
+  content: ",";
+}
+.vevent .horizontal.metadata .category span:last-child:after {
+  content: "";
+}
+.vevent .timezone {
+  display: block;
+  width: 100%;
+  padding: .2em 0;
+  margin-top: .5em;
+  color: #354;
+  background-color: #ffe;
+}
+.vevent .timerange,
+.vevent .timezone {
+  font-size: 85%;
+  line-height: 1em;
+  white-space: nowrap;
+}
+.vevent .datedisplay {
+  margin-bottom: .2em;
+  font-size: 100%;
+  line-height: 1.5em;
+}
 /* PORTRAIT TABLETS */
 @media (min-width: 768px) and (max-width: 991px) {
   .navbar-header {
