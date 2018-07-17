@@ -619,7 +619,7 @@ article.vevent a.event_ical img {
 .vevent span.cal_month {
  font-size:1.1em;
  line-height:1.3em;
- background:@blue;
+ background:#afca06 !important; //9c99c grau
  display:block;
  color:#FFF;
  padding: 6px 12px;
@@ -671,5 +671,18 @@ article.vevent a.event_ical img {
  line-height:1.5em;
  margin-bottom:.2em;
  font-size:100%
+}
+// Event details
+.event.summary {
+    font-weight: 400;
+    max-width: 300px;
+    float: right;
+    background: #fafafa;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
+    padding: 12px 12px 12px 36px;
+    margin-left: 5px;
+}
+.event.summary strong, .event.summary li > span {
+    display: block;
 }
 
