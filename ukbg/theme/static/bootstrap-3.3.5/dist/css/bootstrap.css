@@ -7257,6 +7257,9 @@ li.listItem a:before {
   font-size: 14px;
   content: "\f0da";
 }
+i.link-mailto:after {
+  content: "\2709";
+}
 /*
 
 // fix pagination ul
@@ -8794,6 +8797,31 @@ h3.newsDescription {
   margin-top: -1em;
   text-align: right;
 }
+.template-event_listing .documentFirstHeading {
+  position: relative;
+}
+.template-event_listing .documentFirstHeading nav {
+  position: absolute;
+  right: 0;
+  bottom: 13px;
+  font-size: 14px;
+}
+.template-event_listing .documentFirstHeading nav ul {
+  margin: 0;
+  list-style-type: none;
+}
+.template-event_listing ul.mode_selector {
+  display: block;
+  margin-left: 0;
+  list-style-type: none;
+}
+.template-event_listing ul.mode_selector li {
+  display: inline;
+}
+.template-event_listing nav ul.mode_selector li a {
+  display: inline-block;
+  margin-left: .5em;
+}
 .cal_date {
   float: right;
   width: 100px;
@@ -8841,12 +8869,17 @@ article.vevent a.event_ical img {
 }
 .vevent span.cal_month {
   display: block;
+  padding: 6px 12px;
   font-size: 1.1em;
   line-height: 1.3em;
+  color: #fff;
   background: #004994;
 }
 .vevent div.cal_info {
   margin-left: 9em;
+}
+.cal_info .description {
+  font-weight: bold;
 }
 #content .vevent ul.metadata {
   margin: .8em 0;
