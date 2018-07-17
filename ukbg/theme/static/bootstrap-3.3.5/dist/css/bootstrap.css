@@ -8873,7 +8873,7 @@ article.vevent a.event_ical img {
   font-size: 1.1em;
   line-height: 1.3em;
   color: #fff;
-  background: #004994;
+  background: #afca06 !important;
 }
 .vevent div.cal_info {
   margin-left: 9em;
@@ -8923,6 +8923,20 @@ article.vevent a.event_ical img {
   margin-bottom: .2em;
   font-size: 100%;
   line-height: 1.5em;
+}
+.event.summary {
+  float: right;
+  max-width: 300px;
+  padding: 12px 12px 12px 36px;
+  margin-left: 5px;
+  font-weight: 400;
+  background: #fafafa;
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
+          box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
+}
+.event.summary strong,
+.event.summary li > span {
+  display: block;
 }
 /* PORTRAIT TABLETS */
 @media (min-width: 768px) and (max-width: 991px) {
