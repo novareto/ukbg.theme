@@ -544,7 +544,32 @@ h3.newsDescription {
     }
 
 }
-
+// Template Event Ploen 5 changed 16. july 2018 Stefania and Ale
+.template-event_listing .documentFirstHeading {
+    position: relative;
+}
+.template-event_listing .documentFirstHeading nav {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    bottom: 13px;
+}
+.template-event_listing .documentFirstHeading nav ul {
+    margin: 0;
+    list-style-type: none;
+}
+.template-event_listing ul.mode_selector {
+    display: block;
+    margin-left: 0;
+    list-style-type: none;
+}
+.template-event_listing ul.mode_selector li {
+    display: inline;
+}
+.template-event_listing nav ul.mode_selector li a {
+    display: inline-block;
+    margin-left: .5em;
+}
 .cal_date {
 	float: right;
 	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
@@ -595,10 +620,15 @@ article.vevent a.event_ical img {
  font-size:1.1em;
  line-height:1.3em;
  background:@blue;
- display:block
+ display:block;
+ color:#FFF;
+ padding: 6px 12px;
 }
 .vevent div.cal_info {
  margin-left:9em
+}
+.cal_info .description {
+  font-weight: bold;
 }
 #content .vevent ul.metadata {
  margin:.8em 0
