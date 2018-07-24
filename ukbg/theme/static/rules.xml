@@ -31,6 +31,8 @@
         <!-- TEMP RULE -->
         <before css:content="#master-slider-container" css:theme="#main"/>
 
+	<replace css:content="#portalmaker" css:theme="#portalmaker"/>
+
         <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="header"/>
         <!-- Header rules -->
         <!--<replace css:theme-children="#logo" css:content="#portal-logo"/>-->

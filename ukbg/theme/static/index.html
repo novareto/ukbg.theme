@@ -10,7 +10,7 @@
     <meta name="author" content="">
     <link rel="icon" type="image/ico" href="assets/ico/favicon.ico">
 
-    <title>BGETEM · Berufsgenossenschaft Energie Textil Elektro Medienerzeugnisse</title>
+    <title>BGHW · Berufsgenossenschaft Handel und Warenlogistik</title>
 
     <!-- Bootstrap core CSS -->
     <link href="bootstrap-3.3.5/dist/css/bootstrap.css" rel="stylesheet">
@@ -38,6 +38,7 @@
 
         <header id="pagetop">
             <div class="container">
+		<div id="portalmaker"></div>
                 <!-- mobile-site-action-->
                 <div id="mobile-site-action" class="">
 
@@ -76,7 +77,7 @@
                             </ul>
                             <div class="navbar-search col-xs-12">
                                 <div id="portal-searchbox">
-                                    <form id="livesearch0" action="@@nvasearch">
+                                    <form id="livesearch0" action="/inwiportal/@@search">
                                         <div class="form-group">
                                             <div class="LSBox">
                                                 <input id="searchGadget" class="form-control searchField" type="text" accesskey="4" placeholder="Suchbegriff / Webcode" name="SearchableText" size="" tile="Begriff/Webcode" autocomplete="off">
@@ -194,9 +195,35 @@
     <!--script src="assets/js/ie10-viewport-bug-workaround.js"></script>
     <script src="assets/js/codetab.js"></script-->
 
-    <!--<script src="bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script src="bootstrap-3.3.5/dist/js/bootstrap.min.js"></script>
 
     <div id="site-scripts"></div>
+
+    <script type="text/javascript">
+	$(document).ready(function() {
+	   if ( $('table').hasClass('listing')) {
+	     $('table').removeClass('listing');
+	     $('table').addClass('table table-striped');
+	   }
+	   if ( $('table').hasClass('grid listing')) {
+	     $('table').removeClass('grid listing');
+	     $('table').addClass('table table-striped');
+	   }
+	   if ( $('table').hasClass('vertical listing')) {
+	     $('table').removeClass('vertical listing');
+	     $('table').addClass('table table-striped');
+	   }
+	   if ( $('table').hasClass('invisible')) {
+	     $('table').removeClass('invisible');
+	     $('table').addClass('table');
+	   }
+	   if ( $('table').hasClass('plain')) {
+	     $('table').removeClass('plain');
+	     $('table').addClass('table');
+	   }
+	});
+    </script>
 
     <script type="text/javascript">
         $(document).ready(function() {
