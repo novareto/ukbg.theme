@@ -4,8 +4,12 @@
        xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
        xmlns:xi="http://www.w3.org/2001/XInclude">
 
+    <notheme if-path="@@manage-viewlets" />
+
     <!-- Include the backend theme -->
     <xi:include href="++theme++barceloneta/backend.xml" />
+
+
 
     <rules css:if-content="body.viewpermission-view, body.viewpermission-none">>
         <theme href="index.html" />
