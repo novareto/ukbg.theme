@@ -11746,6 +11746,17 @@ only screen and (                min-resolution: 2dppx) {
 .ms-tabs-vertical-template .ms-thumb-list {
   right: -205px !important;
 }
+.ms-thumb-list.ms-dir-v .ms-thumblist-fwd,
+.ms-thumb-list.ms-dir-v .ms-thumblist-bwd {
+  width: 100%;
+}
+.ms-tabs.ms-dir-v .ms-thumb-frame {
+  width: 229px;
+  margin-left: 0;
+}
+.ms-tabs-vertical-template .ms-thumb-list {
+  background-color: #efefef;
+}
 @media (max-width: 1200px) {
   .ms-layer.video-title {
     font-size: 14px !important;
@@ -11755,6 +11766,76 @@ only screen and (                min-resolution: 2dppx) {
 @media (max-width: 767px) {
   .ms-tabs-template .ms-thumb-frame h3 {
     font-size: 16px;
+  }
+}
+.portalmarker {
+  margin-top: 105px;
+}
+.portalmarker-fullname {
+  position: relative;
+  top: 10px;
+  padding: 80px;
+  color: white;
+}
+nav.portal-marker-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 90px;
+  overflow: hidden;
+  background-color: rgba(128, 128, 128, .8);
+  -webkit-transition: height .3s;
+       -o-transition: height .3s;
+          transition: height .3s;
+}
+nav.portal-marker-head .portal-marker-container {
+  float: right;
+  width: 150px;
+  height: 150px;
+  margin-top: -80px;
+  margin-right: 20px;
+  background-color: #fff;
+  border-radius: 100px;
+}
+nav.portal-marker-head h1#logo {
+  display: inline-block;
+  margin-top: 50%;
+  margin-left: 18%;
+  font-size: 24px;
+  line-height: 3em;
+  color: #004994;
+  text-align: center;
+  border-radius: 100px;
+}
+nav.portal-marker-head.smaller {
+  height: 50px;
+}
+nav.portal-marker-head.smaller .portal-marker-container {
+  margin-top: -106px;
+}
+nav.portal-marker-head.smaller h1#logo {
+  width: 150px;
+  height: 75px;
+  margin-top: 100px;
+  margin-left: .5%;
+  font-size: 18px;
+  line-height: 55px;
+  text-align: center;
+}
+@media all and (max-width: 760px) {
+  nav.portal-marker-head h1#logo {
+    display: block;
+    margin-left: 0;
+    text-align: center;
+  }
+  nav.portal-marker-head.smaller {
+    height: 50px;
+  }
+  nav.portal-marker-head.smaller h1#logo {
+    font-size: 18px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
