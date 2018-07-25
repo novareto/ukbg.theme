@@ -51,6 +51,9 @@
                 <xsl:apply-templates select="./text()"/>
             </div>
         </replace>
+        <replace css:theme="#portalmarker" css:content="#portalmarker"/>
+
+
         <replace css:content="content-core img">
 
             <xsl:copy>
