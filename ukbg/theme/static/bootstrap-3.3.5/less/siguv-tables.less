@@ -1,4 +1,7 @@
 // Tables
+table {
+  th, td, tr {font-size:@font-size-base;font-family: "DGUVMetaWeb-Normal", Helvetica, Arial, sans-serif;}
+}
 
 table.ploneCalendar {
         width:100%;
@@ -10,6 +13,18 @@ table.ploneCalendar td {
 table td img {
         max-width:inherit;
         }
+.table-verticallisting {
+	th {
+	border-top-color:#ddd !important;
+	background:@blue !important;
+	color:white !important;
+	}
+        td {
+	border-top-color:#ddd !important;
+	border-bottom: 1px solid #ddd;
+    	border-right: 1px solid #ddd;
+	}
+}
 .table-striped {
         background:white;
 	th, td {font-size:@font-size-base;font-family: "DGUVMetaWeb-Normal", Helvetica, Arial, sans-serif;}
@@ -19,6 +34,7 @@ table td img {
         margin:0;
         padding:10px;
 }
+.table thead,
 .table-condensed > tbody > tr:first-child,
 .table-responsive caption,
 .table-striped thead,
@@ -42,7 +58,7 @@ table td img {
 .table-responsive caption,
 .table-striped caption,
 .table th {
-        border-bottom:1px solid @blue !important;
+        border-bottom:1px solid #ddd;
         }
 table.listing td.draggable {
   text-shadow: White 1px 1px 1px;
@@ -373,4 +389,40 @@ table.tablesaw {
         padding-right: 10px;
         white-space: nowrap;
     }
+}
+
+@media only screen and (max-width: 760px), (max-device-width: 1024px) and (min-device-width: 768px) {
+.table-striped tr {
+    border: 1px solid #ddd;
+    height: auto !important;
+}
+}
+@media only screen and (max-width: 760px), (max-device-width: 1024px) and (min-device-width: 768px) {
+table.table-striped, .table-striped thead, .table-striped tbody, .table-striped th, .table-striped td, .table-striped tr {
+    display: block;
+}
+}
+@media only screen and (max-width: 760px), (max-device-width: 1024px) and (min-device-width: 768px) {
+.table-striped {
+    thead > tr > td,
+    thead > tr > th,
+    td, 
+    th {
+    height: auto !important;
+    text-align: left;
+    white-space: normal;
+    border: none;
+    width:100% !important;
+    border-bottom: 1px solid #ddd;
+    }
+}
+}
+@media only screen and (max-width: 760px), (max-device-width: 1024px) and (min-device-width: 768px) {
+.table-striped {
+    thead > tr > td,
+    td {
+    width:100% !important;
+    padding-left: 50%;
+    }
+}
 }
