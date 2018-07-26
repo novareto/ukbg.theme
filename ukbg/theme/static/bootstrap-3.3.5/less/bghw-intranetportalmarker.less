@@ -1,0 +1,71 @@
+.portalmarker {
+	margin-top:105px;
+	}
+.portalmarker-fullname {
+	color:white;
+	padding:80px;
+	position: relative;
+    	top: 10px;
+	}
+
+nav.portal-marker-head {
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: rgba(128,128,128,.8);
+    transition: height 0.3s;
+}
+    
+nav.portal-marker-head .portal-marker-container{
+    height: 150px;
+    width: 150px;
+    border-radius: 100px;
+    background-color: #fff;
+    margin-top: -80px;
+    margin-right: 20px;
+    float: right;
+}
+nav.portal-marker-head h1#logo {
+    display: inline-block;
+    line-height:3em;
+    margin-top: 50%;
+    margin-left: 18%;
+    border-radius: 100px;
+    font-size: 24px;
+    color: #004994;
+    text-align: center;
+}
+nav.portal-marker-head.smaller {
+    height: 50px;
+    background-color: rgba(128,128,128,.5);
+}
+nav.portal-marker-head.smaller .portal-marker-container{
+    margin-top: -106px;
+}    
+nav.portal-marker-head.smaller h1#logo {
+    width: 150px;
+    height: 75px;
+    line-height: 55px;
+    font-size: 18px;
+    margin-top: 100px;
+    margin-left: 0.5%;
+    text-align: center;
+}
+@media all and (max-width: 760px) {
+    nav.portal-marker-head h1#logo {
+        display: block;
+        text-align: center;
+        margin-left: 0%;
+    }
+    nav.portal-marker-head.smaller {
+        height: 50px;
+    }
+    nav.portal-marker-head.smaller h1#logo {
+        font-size: 18px;
+        text-align: center;
+    }
+} 
