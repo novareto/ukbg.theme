@@ -3556,14 +3556,16 @@ tbody.collapse.in {
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-left: 10px;
   vertical-align: middle;
   border-top: 4px dashed;
   border-top: 4px solid \9;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
 }
-.dropup,
+.dropup {
+  position: relative;
+}
 .dropdown {
   position: relative;
 }
@@ -3571,7 +3573,7 @@ tbody.collapse.in {
   outline: 0;
 }
 .dropdown-menu {
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 0;
   z-index: 1000;
@@ -6847,6 +6849,9 @@ button.close {
 #content-core ol {
   padding-left: 18px;
   font-family: "DGUVMetaWeb-Normal";
+}
+#content-core ol > li > a::marker {
+  color: #004994;
 }
 .glyphicon.link-external,
 .glyphicon.link-https {
@@ -11771,13 +11776,18 @@ only screen and (                min-resolution: 2dppx) {
     font-size: 16px;
   }
 }
+#portalmarker .nav > li > a:hover,
+#portalmarker .nav > li > a:focus {
+  background-color: transparent;
+}
+#portalmarker .nav > li {
+  margin-right: 20px;
+}
 .portalmarker {
   margin-top: 105px;
 }
 .portalmarker-fullname {
-  position: relative;
-  top: 10px;
-  padding: 80px;
+  float: right;
   color: white;
 }
 nav.portal-marker-head {
@@ -11787,7 +11797,6 @@ nav.portal-marker-head {
   z-index: 2;
   width: 100%;
   height: 90px;
-  overflow: hidden;
   background-color: rgba(128, 128, 128, .8);
   -webkit-transition: height .3s;
        -o-transition: height .3s;
@@ -11814,7 +11823,7 @@ nav.portal-marker-head h1#logo {
 }
 nav.portal-marker-head.smaller {
   height: 50px;
-  background-color: rgba(128, 128, 128, .5);
+  background-color: rgba(128, 128, 128, .7);
 }
 nav.portal-marker-head.smaller .portal-marker-container {
   margin-top: -106px;
