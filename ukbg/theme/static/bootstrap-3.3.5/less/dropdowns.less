@@ -8,7 +8,7 @@
   display: inline-block;
   width: 0;
   height: 0;
-  margin-left: 2px;
+  margin-left: 10px;
   vertical-align: middle;
   border-top:   @caret-width-base dashed;
   border-top:   @caret-width-base solid ~"\9"; // IE8
@@ -17,11 +17,13 @@
 }
 
 // The dropdown wrapper (div)
-.dropup,
-.dropdown {
+.dropup {
   position: relative;
 }
 
+.dropdown {
+  position: relative;
+}
 // Prevent the focus on the dropdown toggle when closing dropdowns
 .dropdown-toggle:focus {
   outline: 0;
@@ -29,7 +31,7 @@
 
 // The dropdown menu (ul)
 .dropdown-menu {
-  position: absolute;
+  position: relative;
   top: 100%;
   left: 0;
   z-index: @zindex-dropdown;
