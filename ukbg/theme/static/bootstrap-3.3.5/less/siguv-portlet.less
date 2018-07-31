@@ -1,7 +1,7 @@
 // Portlet
 
 .portlet-right, .portlet-left {
-  
+    font-family: @dguv-normal-font-name, sans-serif;
   .portletWrapper {clear:both;}
 
   .portlet {
@@ -11,7 +11,7 @@
     .portletContent {
         li {
           padding-right:10px;
-          margin-left: 21px;
+          margin:10px 10px 10px 21px;
           text-indent: -12px;
         }
       label {padding-left:10px;}
@@ -73,7 +73,6 @@ a.event-location {
   border-bottom:0 !important;
   }
 
-.portletEvents ul:hover {background: @lightGrayBgColor;}
 
 //Navigation Portlet
 .nav-list .portletItem li {
@@ -93,7 +92,7 @@ a.event-location {
 .portletBlueLinePortlet {
         border:0 !important;
         background:@blueextranet !important;
-        padding:0 5px;
+        padding:0 10px;
         }
 .portletBlueLinePortlet h4 {
         border-bottom: 0;
@@ -105,7 +104,6 @@ a.event-location {
         color:@white;
         }
 .portletBlueLinePortlet h4 > span:nth-child(3) {
-        border-bottom: 1px solid @white !important;
         display:block;
         margin:0 -5px;
         }
@@ -124,7 +122,7 @@ a.event-location {
         }
 .portletBlueLinePortlet .bl-portletFooter {
         font-size: 10px;
-        text-align: right;
+        margin-top: 5px;
         }
 
 // Glossary
@@ -291,15 +289,52 @@ dl.portletLogin {
 .portletItem a.tile {
     width: 24px;
     height: 24px;
-    background-position: -20px -318px;
     padding-left:12px;
 }
-
+.portletFooter {
+	a {
+    line-height:2em;
+    padding-bottom:10px;
+    font-family: @dguv-normal-font-name, sans-serif;
+	}
+}
 .widget input[type='text'],
 .widget input[type='checkbox'] {
 	width:100%;
 	}
-
+//BluelinePortlet 
+.portletBlueLinePortlet {
+ h4.bl-portletHeader {
+    border-bottom: 1px solid white;
+    color: #fff;
+  }
+ .bl-portletItem > ul {
+	list-style-type: none;
+	}
+ .bl-portletFooter {
+      border-top: 1px solid white;
+      padding-bottom:10px; 
+      padding-top:10px; 
+	a {
+    font-size:14px;	
+    font-family: @dguv-normal-font-name, sans-serif;
+	}  
+	}
+  .portletHeader {
+	border-bottom:none;	
+    }
+}
+.portletNovareto,
+.portletEvents,
+.portletCollection {
+	.portletFooter {
+	border-top: 1px solid #ebebeb;
+	padding:10px;
+  }
+}
+.portletNovareto p {
+	color:@blue;
+}
 //Portlet manager
 
 .managePortletsLink {padding:10px}
