@@ -9717,7 +9717,7 @@ div.overlay .formControls a {
 .portlet-right .portlet .portletContent li,
 .portlet-left .portlet .portletContent li {
   padding-right: 10px;
-  margin: 10px 10px 10px 21px;
+  margin: 2px 10px 2px 21px;
   text-indent: -12px;
 }
 .portlet-right .portlet .portletContent label,
