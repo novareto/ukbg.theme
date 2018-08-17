@@ -10344,8 +10344,8 @@ li.navTreeItem a.contenttype-news-item:after {
     display: none;
   }
 }
-@media all and (max-width: 992px) {
-  #portal-column-one .nav-stacked {
+@media all and (min-width: 992px) {
+  #portal-navigation:nth-of-type(1) {
     display: none;
   }
 }
@@ -11870,6 +11870,12 @@ nav.portal-marker-head.smaller h1#logo {
   line-height: 55px;
   text-align: center;
 }
+.navbar-nav.admin {
+  float: right;
+}
+.navbar-nav.admin > li.dropdown {
+  float: right;
+}
 @media all and (max-width: 760px) {
   nav.portal-marker-head h1#logo {
     display: block;
@@ -11882,6 +11888,20 @@ nav.portal-marker-head.smaller h1#logo {
   nav.portal-marker-head.smaller h1#logo {
     font-size: 18px;
     text-align: center;
+  }
+  .portalmarker-fullname {
+    float: none;
+  }
+}
+@media (max-width: 768px) {
+  .navbar-nav li {
+    border-bottom: 0;
+  }
+  .navbar-nav.admin {
+    float: left;
+  }
+  .navbar-nav.admin > li.dropdown {
+    float: left;
   }
 }
 .pagination {
