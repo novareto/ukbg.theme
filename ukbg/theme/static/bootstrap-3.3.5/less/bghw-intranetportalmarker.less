@@ -60,6 +60,13 @@ nav.portal-marker-head.smaller h1#logo {
     margin-left: 0.5%;
     text-align: center;
 }
+.navbar-nav.admin{
+    float: right;
+}
+
+.navbar-nav.admin > li.dropdown{
+    float:right;
+}
 @media all and (max-width: 760px) {
     nav.portal-marker-head h1#logo {
         display: block;
@@ -73,4 +80,19 @@ nav.portal-marker-head.smaller h1#logo {
         font-size: 18px;
         text-align: center;
     }
-} 
+   .portalmarker-fullname {
+	float: none;
+   }
+}
+@media (max-width: 768px){
+	.navbar-nav li{
+		border-bottom: 0px;
+	}
+       .navbar-nav.admin{
+	float:left;
+	}
+	.navbar-nav.admin > li.dropdown{
+ 	   float:left;
+        }
+}
+ 
