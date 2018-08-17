@@ -300,7 +300,7 @@
                         <aside id="portal-column-one">
                             <xsl:choose>
                                 <xsl:when css:test="body.section-front-page">
-                                    <xsl:copy-of select="//*[@id='portal-column-one']/div/*[not(@role='navigation')]"/>
+                                    <xsl:copy-of select="//*[@id='portal-column-one']/div/*[(@role='navigation')]"/>
                                 </xsl:when>
                                 <xsl:otherwise>
                                     <xsl:copy-of select="//*[@id='portal-column-one']/div/*"/>
