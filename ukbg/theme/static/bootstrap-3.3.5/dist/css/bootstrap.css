@@ -7887,12 +7887,6 @@ span.image-caption {
     padding: 6px 0;
     line-height: 20px;
   }
-  .portlet-left ul li:last-child,
-  .portlet-right ul li:last-child,
-  .portlet-left section,
-  .portlet-right section {
-    border: 0;
-  }
   .navMenu span.naviTopRight,
   .portlet-left span.portletTopRight {
     float: right;
@@ -10341,11 +10335,6 @@ li.navTreeItem a.contenttype-news-item:after {
 }
 @media all and (min-width: 992px) {
   .secondary-navigation {
-    display: none;
-  }
-}
-@media all and (min-width: 992px) {
-  #portal-navigation:nth-of-type(1) {
     display: none;
   }
 }
