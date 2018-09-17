@@ -27,9 +27,9 @@ setup(name='ukbg.theme',
           'setuptools',
           # -*- Extra requirements: -*-
           'z3c.jbot',
-          'diazo==1.0.6',
-          'plone.app.theming==1.3.0',
-          'experimental.cssselect==0.3',
+          'diazo<1.1.0',
+          'plone.app.theming',
+          'experimental.cssselect',
           'cssselect',
 
       ],
