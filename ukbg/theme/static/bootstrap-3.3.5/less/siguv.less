@@ -144,6 +144,20 @@ a.tile {
     height: 24px;
     background-position: -20px -318px;
 }
+// Folder Status
+a.contenttype-folder.state-pending,
+a.contenttype-document.state-pending {
+		color: #d39105; // yellow
+}
+a.contenttype-folder.state-draft,
+a.contenttype-document.state-draft {
+		color: #31B404; //green
+}
+a.contenttype-folder.state-private,
+a.contenttype-document.state-private {
+		color: #c4183c; //red
+}
+ 
 // kurzfassung
 .media {
     margin-top:0;
@@ -373,24 +387,26 @@ nav.plone-breadcrumb {
         display: inline-block;
         line-height: 0;
         position: relative;
-        padding: 0 10px 0 0;
+        padding: 0 8px 0 0;
+        text-indent:10px;
 
         + li:after {
-            content: "/";
+	    font-family: 'FontAwesome';
+    	    font-weight: 900;
+            content: "\f105";
             position: absolute;
-            padding:0 5px;
             color: @fontLighter;
-            left: -11px;
+            left: -8px;
             top: 0px;
             padding: 0 !important;
             }
 
         + li:before {
-            content: "/";
+	    font-family: 'FontAwesome';
+            content: "\f105";
             position: absolute;
-            padding:0 5px;
             color: @fontLighter;
-            left: -10px;
+            left: -8px;
             top: 0px;
             padding: 0 !important;
             }
