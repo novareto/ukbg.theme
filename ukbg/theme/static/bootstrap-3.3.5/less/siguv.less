@@ -69,7 +69,7 @@ body {
 h1, h2, h3, h4 {
     font-family: @dguv-bold-font-name, sans-serif;
 }
-.documentByLine {padding:10px 0}
+.documentByLine {padding:10px}
 h4 {line-height:1.4em;}
 h1 {color:@blue;}
 #parent-fieldname-text h1 {
@@ -704,7 +704,30 @@ article.vevent a.event_ical img {
 // Servicebutton
 .praevdoc_contentbox {
   padding:0 10px;
+	div {
+	}
+	div > div {
+         min-width:80px;
+	 min-height:150px;
+	 margin-right:10px;
+	 padding:0;
+		a {
+		  float: left;
+    		  text-align: center;
+                  padding: 4px;
+		}	
+	}
 	.boxlink img {
 	padding-top:5px;
   }
+}
+@media (max-width: @screen-sm-max) {
+	.praevdoc_contentbox {
+		div > div a {
+         	padding:0;
+	}
+	.boxlink img {
+        	width:60%;
+	}
+	}
 }
