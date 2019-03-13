@@ -1,0 +1,116 @@
+	.column-slider {
+          width: auto;
+          overflow: scroll;
+        }
+
+        .column-slider-content {
+          width: 5000px;
+          overflow: scroll;
+        } 
+
+        .column {
+          display: inline-block;
+          width: 3%;
+          float: left;
+          padding: 3px;
+        }
+
+        .slider {
+          display: block;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        .slider-content {
+          position: relative;
+          margin: auto;
+          padding: 0;
+          max-width: 1200px;
+        }
+
+        .slides {
+          display: block;
+          padding: 5px;
+        }
+
+        .cursor {
+          cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -100px;
+          color: white;
+          font-weight: bold;
+          font-size: 40px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 5px;
+          border-radius: 3px 0 0 3px;
+        }
+	.prev {
+	  left: 5px;
+	}
+
+        /* Add a black background color with a transparency when hovering */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Numbering text of the Slides */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        .slides img {
+          margin-bottom: 10px;
+        }
+
+        .caption-container {
+          text-align: center;
+          padding: 2px 16px;
+          color: black;
+        }
+
+        .thumbnail-gallery {
+          opacity: 0.6;
+        }
+
+        .active,
+        .thumbnail-gallery:hover {
+          opacity: 1;
+        }
+
+        img.hover-shadow {
+          transition: 0.3s;
+        }
+
+        .hover-shadow:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        @media only screen and (max-width:768px) {
+          .column {
+            width: 2%;
+          }
+        }
