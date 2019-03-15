@@ -4384,7 +4384,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     float: none;
     width: auto;
     margin-top: 0;
-    background-color: transparent;
     border: 0;
     -webkit-box-shadow: none;
             box-shadow: none;
@@ -7244,8 +7243,16 @@ li.listItem a:before {
   font-size: 14px;
   content: "\f0da";
 }
+i.link-mailto {
+  display: inline;
+}
 i.link-mailto:after {
+  padding-right: 3px;
+  color: #004994;
   content: "\2709";
+}
+i.link-mailto:before {
+  padding-left: 3px;
 }
 /*
 
@@ -7286,7 +7293,7 @@ ul.mobile-site-action {
 }
 #mobile-site-action .plus {
   width: 32px;
-  height: 32px;
+  height: 20px;
   cursor: pointer;
   background: url(../../../assets/img/sprites.png) -14px -978px no-repeat;
 }
@@ -7499,14 +7506,6 @@ span.image-caption {
   top: -31px;
   right: 10px;
   float: right;
-}
-#content > h1,
-#content > h2,
-#content > h3,
-#content > h4,
-#content > div {
-  padding-right: 10px;
-  padding-left: 10px;
 }
 .item p img {
   padding-right: 10px;
@@ -7810,11 +7809,12 @@ span.image-caption {
   .medialinks a {
     top: -100px !important;
   }
-  #portal-logo img {
-    top: -32px !important;
-  }
 }
 @media (max-width: 979px) {
+  #divLogo h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
   .section-front-page .offcanvas {
     display: none !important;
   }
@@ -8124,12 +8124,8 @@ span.image-caption {
   }
   .lupegrau {
     position: relative;
-    top: -48px;
+    top: -40px;
     right: 5px;
-  }
-  #portal-logo img {
-    position: relative;
-    top: -18px;
   }
   .nav-collapse .navbar-search {
     border: 0;
@@ -8252,7 +8248,7 @@ h4 {
   font-family: "DGUVMetaWeb-Bold", sans-serif;
 }
 .documentByLine {
-  padding: 10px 0;
+  padding: 10px;
 }
 h4 {
   line-height: 1.4em;
@@ -8330,6 +8326,18 @@ a.tile {
   width: 24px;
   height: 24px;
   background-position: -20px -318px;
+}
+a.contenttype-folder.state-pending,
+a.contenttype-document.state-pending {
+  color: #d39105;
+}
+a.contenttype-folder.state-draft,
+a.contenttype-document.state-draft {
+  color: #31b404;
+}
+a.contenttype-folder.state-private,
+a.contenttype-document.state-private {
+  color: #c4183c;
 }
 .media {
   margin-top: 0;
@@ -8576,26 +8584,28 @@ nav.plone-breadcrumb ol {
 nav.plone-breadcrumb ol li {
   position: relative;
   display: inline-block;
-  padding: 0 10px 0 0;
+  padding: 0 8px 0 0;
   line-height: 0;
+  text-indent: 10px;
 }
 nav.plone-breadcrumb ol li + li:after {
   position: absolute;
   top: 0;
-  left: -11px;
-  padding: 0 5px;
+  left: -8px;
   padding: 0 !important;
+  font-family: 'FontAwesome';
+  font-weight: 900;
   color: #9a9a9a;
-  content: "/";
+  content: "\f105";
 }
 nav.plone-breadcrumb ol li + li:before {
   position: absolute;
   top: 0;
-  left: -10px;
-  padding: 0 5px;
+  left: -8px;
   padding: 0 !important;
+  font-family: 'FontAwesome';
   color: #9a9a9a;
-  content: "/";
+  content: "\f105";
 }
 nav.plone-breadcrumb ol li a {
   color: #004994;
@@ -8882,8 +8892,27 @@ article.vevent a.event_ical img {
 .praevdoc_contentbox {
   padding: 0 10px;
 }
+.praevdoc_contentbox div > div {
+  min-width: 80px;
+  min-height: 150px;
+  padding: 0;
+  margin-right: 10px;
+}
+.praevdoc_contentbox div > div a {
+  float: left;
+  padding: 4px;
+  text-align: center;
+}
 .praevdoc_contentbox .boxlink img {
   padding-top: 5px;
+}
+@media (max-width: 991px) {
+  .praevdoc_contentbox div > div a {
+    padding: 0;
+  }
+  .praevdoc_contentbox .boxlink img {
+    width: 60%;
+  }
 }
 /* PORTRAIT TABLETS */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -9926,6 +9955,9 @@ a.event-location {
     font-size: 14px;
   }
 }
+.portletItem .timezone {
+  display: none;
+}
 .portletStichwort,
 .portletNews > div,
 .portletCollection > div {
@@ -10389,6 +10421,9 @@ li.navTreeItem a.contenttype-news-item:after {
 }
 .more-video {
   padding-left: 20px;
+}
+#edi.videoembedview {
+  margin: 0 10px;
 }
 @font-face {
   font-family: 'fontello';
@@ -11869,6 +11904,7 @@ nav.portal-marker-head.smaller h1#logo {
   nav.portal-marker-head h1#logo {
     display: block;
     margin-left: 0;
+    color: white;
     text-align: center;
   }
   nav.portal-marker-head.smaller {
@@ -11883,6 +11919,12 @@ nav.portal-marker-head.smaller h1#logo {
   }
 }
 @media (max-width: 768px) {
+  .portalmarker {
+    margin-top: 30px;
+  }
+  nav.portal-marker-head {
+    height: 34px;
+  }
   .navbar-nav li {
     border-bottom: 0;
   }
@@ -11891,6 +11933,10 @@ nav.portal-marker-head.smaller h1#logo {
   }
   .navbar-nav.admin > li.dropdown {
     float: left;
+  }
+  nav.portal-marker-head .portal-marker-container {
+    height: 60px;
+    margin-top: -90px;
   }
 }
 .pagination {
@@ -11964,6 +12010,225 @@ nav.portal-marker-head.smaller h1#logo {
   .pagination li.previous,
   .pagination li.next {
     display: inline;
+  }
+}
+@media print {
+  .footer-wrapper,
+  #edit-zone {
+    display: none;
+  }
+  #viewlet-below-content-body {
+    display: none;
+  }
+}
+.column-slider {
+  width: auto;
+  overflow: scroll;
+}
+.column-slider-content {
+  width: 5000px;
+  overflow: scroll;
+}
+.column {
+  display: inline-block;
+  float: left;
+  width: 3%;
+  padding: 3px;
+}
+.slider {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.slider-content {
+  position: relative;
+  max-width: 1200px;
+  padding: 0;
+  margin: auto;
+}
+.slides {
+  display: block;
+  padding: 5px;
+}
+.cursor {
+  cursor: pointer;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -100px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 0 3px 3px 0;
+  -webkit-transition: .6s ease;
+       -o-transition: .6s ease;
+          transition: .6s ease;
+}
+/* Position the "next button" to the right */
+.next {
+  right: 5px;
+  border-radius: 3px 0 0 3px;
+}
+.prev {
+  left: 5px;
+}
+/* Add a black background color with a transparency when hovering */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, .5);
+}
+/* Numbering text of the Slides */
+.numbertext {
+  position: absolute;
+  top: 0;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #f2f2f2;
+}
+.slides img {
+  margin-bottom: 10px;
+}
+.caption-container {
+  padding: 2px 16px;
+  color: black;
+  text-align: center;
+}
+.thumbnail-gallery {
+  opacity: .6;
+}
+.active,
+.thumbnail-gallery:hover {
+  opacity: 1;
+}
+img.hover-shadow {
+  -webkit-transition: .3s;
+       -o-transition: .3s;
+          transition: .3s;
+}
+.hover-shadow:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+@media only screen and (max-width: 768px) {
+  .column {
+    width: 2%;
+  }
+}
+h2 {
+  margin: 12px 0;
+  font-size: 16px;
+  color: #004994;
+}
+.login-body {
+  font-family: Arial;
+  font-size: 11px;
+  color: #666;
+  background-color: #eee;
+}
+.login-container {
+  width: 999px;
+  margin: 0 auto 0 auto;
+}
+.login-head {
+  height: 87px;
+  margin-top: 10px;
+  background-color: #fff;
+  border-bottom: 4px solid #004994;
+}
+.login-logo {
+  float: left;
+  width: 210px;
+  height: 75px;
+  margin: 10px 0 0 25px;
+  background-image: url(https://www.bghw.de/logo.jpg);
+  background-repeat: no-repeat;
+}
+.login-nav ul {
+  float: right;
+  margin-right: 25px;
+}
+.login-nav ul li {
+  display: inline-block;
+  padding-left: 10px;
+  list-style: none;
+}
+.login-nav ul li a {
+  color: #666;
+}
+.login-content {
+  background-color: #fff;
+}
+.login-content-center {
+  width: 500px;
+  padding-top: 15px;
+  padding-bottom: 100px;
+  margin: 0 auto;
+}
+.login-content-input {
+  width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  margin: 10px 0;
+  color: #666;
+}
+input.login-submit {
+  margin: 10px 0;
+}
+input.login-submit:hover {
+  color: white;
+  cursor: pointer;
+  background-color: #004994;
+  border-radius: 5px;
+}
+@media only screen and (max-width: 1024px) {
+  .login-container {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .login-content-center {
+    width: 90%;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 100px;
+    padding-left: 10px;
+    margin: 0 auto;
+  }
+  .login-content-input {
+    width: 70%;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .login-head {
+    height: 65px;
+  }
+  .login-logo {
+    width: 120px;
+    margin-left: 10px;
+    background-image: url(https://www.bghw.de/logo.jpg);
+    -webkit-background-size: contain;
+            background-size: contain;
+  }
+  .login-nav ul {
+    margin-right: 10px;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .login-logo {
+    width: 105px;
   }
 }
 /*# sourceMappingURL=bootstrap.css.map */
