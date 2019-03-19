@@ -263,7 +263,7 @@
             });
         });
     </script>
-<script>
+   <script>
     var slideIndex = 1;
     showSlides(slideIndex);
 
@@ -277,23 +277,22 @@
 
     function showSlides(n) {
       var i;
-      var slides = document.getElementsByClassName("slides");
-      var dots = document.getElementsByClassName("thumbnail-gallery");
-      var captionText = document.getElementById("caption");
+      var slides = document.getElementsByClassName("gt-slides");
+      var dots = document.getElementsByClassName("gt-thumbnail-gallery");
+      var captionText = document.getElementById("gt-caption");
       if (n > slides.length) {slideIndex = 1}
       if (n < 1) {slideIndex = slides.length}
       for (i = 0; i < slides.length; i++) {
           slides[i].style.display = "none";
       }
       for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
+          dots[i].className = dots[i].className.replace("gt-active", "");
       }
       slides[slideIndex-1].style.display = "block";
-      dots[slideIndex-1].className += " active";
+      dots[slideIndex-1].className += "gt-active";
       captionText.innerHTML = dots[slideIndex-1].alt;
     }
-  </script>  
-
+  </script>
     <script src="assets/js/offcanvas.js"></script>
     <script src="assets/js/intranet-portalmarker.js"></script>
     <script src="assets/js/truncate-breadcrumbs.js"></script>

@@ -1,21 +1,21 @@
-	.column-slider {
+	.gt-column-slider {
           width: auto;
           overflow: scroll;
         }
 
-        .column-slider-content {
+        .gt-column-slider-content {
           width: 5000px;
           overflow: scroll;
         } 
 
-        .column {
+        .gt-column {
           display: inline-block;
           width: 3%;
           float: left;
           padding: 3px;
         }
 
-        .slider {
+        .gt-slider {
           display: block;
           z-index: 1;
           left: 0;
@@ -24,14 +24,14 @@
           height: 100%;
         }
 
-        .slider-content {
+        .gt-slider-content {
           position: relative;
           margin: auto;
           padding: 0;
           max-width: 1200px;
         }
 
-        .slides {
+        .gt-slides {
           display: block;
           padding: 5px;
         }
@@ -41,8 +41,8 @@
         }
 
         /* Next & previous buttons */
-        .prev,
-        .next {
+        .gt-prev,
+        .gt-next {
           cursor: pointer;
           position: absolute;
           top: 50%;
@@ -59,22 +59,22 @@
         }
 
         /* Position the "next button" to the right */
-        .next {
+        .gt-next {
           right: 5px;
           border-radius: 3px 0 0 3px;
         }
-	.prev {
+	.gt-prev {
 	  left: 5px;
 	}
 
         /* Add a black background color with a transparency when hovering */
-        .prev:hover,
-        .next:hover {
+        .gt-prev:hover,
+        .gt-next:hover {
           background-color: rgba(0, 0, 0, 0.5);
         }
 
         /* Numbering text of the Slides */
-        .numbertext {
+        .gt-numbertext {
           color: #f2f2f2;
           font-size: 12px;
           padding: 8px 12px;
@@ -82,22 +82,23 @@
           top: 0;
         }
 
-        .slides img {
+        .gt-slides img {
           margin-bottom: 10px;
+	  float: none!important;
         }
 
-        .caption-container {
+        .gt-caption-container {
           text-align: center;
           padding: 2px 16px;
           color: black;
         }
 
-        .thumbnail-gallery {
+        .gt-thumbnail-gallery {
           opacity: 0.6;
         }
 
-        .active,
-        .thumbnail-gallery:hover {
+        .gt-active,
+        .gt-thumbnail-gallery:hover {
           opacity: 1;
         }
 
@@ -110,7 +111,7 @@
         }
 
         @media only screen and (max-width:768px) {
-          .column {
+          .gt-column {
             width: 2%;
           }
         }
