@@ -12021,4 +12021,111 @@ nav.portal-marker-head.smaller h1#logo {
     display: none;
   }
 }
+.gt-column-slider {
+  width: auto;
+  overflow: scroll;
+}
+.gt-column-slider-content {
+  width: 5000px;
+  overflow: scroll;
+}
+.gt-column {
+  display: inline-block;
+  float: left;
+  width: 3%;
+  padding: 3px;
+}
+.gt-slider {
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.gt-slider-content {
+  position: relative;
+  max-width: 1200px;
+  padding: 0;
+  margin: auto;
+}
+.gt-slides {
+  display: block;
+  padding: 5px;
+}
+.cursor {
+  cursor: pointer;
+}
+/* Next & previous buttons */
+.gt-prev,
+.gt-next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -100px;
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 0 3px 3px 0;
+  -webkit-transition: .6s ease;
+       -o-transition: .6s ease;
+          transition: .6s ease;
+}
+/* Position the "next button" to the right */
+.gt-next {
+  right: 5px;
+  border-radius: 3px 0 0 3px;
+}
+.gt-prev {
+  left: 5px;
+}
+/* Add a black background color with a transparency when hovering */
+.gt-prev:hover,
+.gt-next:hover {
+  background-color: rgba(0, 0, 0, .5);
+}
+/* Numbering text of the Slides */
+.gt-numbertext {
+  position: absolute;
+  top: 0;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: #f2f2f2;
+}
+.gt-slides img {
+  float: none!important;
+  margin-bottom: 10px;
+}
+.gt-caption-container {
+  padding: 2px 16px;
+  color: black;
+  text-align: center;
+}
+.gt-thumbnail-gallery {
+  opacity: .6;
+}
+.gt-active,
+.gt-thumbnail-gallery:hover {
+  opacity: 1;
+}
+img.hover-shadow {
+  -webkit-transition: .3s;
+       -o-transition: .3s;
+          transition: .3s;
+}
+.hover-shadow:hover {
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .2), 0 6px 20px 0 rgba(0, 0, 0, .19);
+}
+@media only screen and (max-width: 768px) {
+  .gt-column {
+    width: 2%;
+  }
+}
 /*# sourceMappingURL=bootstrap.css.map */
