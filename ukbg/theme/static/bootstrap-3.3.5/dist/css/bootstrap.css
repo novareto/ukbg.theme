@@ -4740,6 +4740,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 }
 .breadcrumb {
   padding: 0 20px;
+  padding: 5px 0;
   margin-bottom: 20px;
   list-style: none;
   background-color: #fff;
@@ -9955,7 +9956,17 @@ a.event-location {
     font-size: 14px;
   }
 }
+.portletItem a.tile:after {
+  white-space: pre;
+  content: "\A";
+}
 .portletItem .timezone {
+  display: none;
+}
+.portletItem .location {
+  display: none;
+}
+.portletItem abbr.dtstart {
   display: none;
 }
 .portletStichwort,
