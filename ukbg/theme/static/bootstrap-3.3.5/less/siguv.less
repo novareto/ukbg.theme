@@ -390,7 +390,7 @@ nav.plone-breadcrumb {
         padding: 0 8px 0 0;
         text-indent:10px;
 
-        + li:after {
+       + li:after {
 	    font-family: 'FontAwesome';
     	    font-weight: 900;
             content: "\f105";
@@ -691,12 +691,10 @@ article.vevent a.event_ical img {
 // Event details
 .event.summary {
     font-weight: 400;
-    max-width: 300px;
-    float: right;
+    max-width: 100%;
+    float: left!important;
     background: #fafafa;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
     padding: 12px 12px 12px 36px;
-    margin-left: 5px;
 }
 .event.summary strong, .event.summary li > span {
     display: block;

@@ -43,7 +43,7 @@ $.fn.breadcrumbs = function(options) {
 // breadcrumb truncation settings
 $(".breadcrumb").breadcrumbs({
   intro: "<span>Sie sind hier: </span>",
-  separator: " / ",
+  separator: " ≫ ",
   maxLevels: 5,
   startCrumbs: 2,
   endCrumbs: 2,
