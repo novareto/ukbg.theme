@@ -4752,7 +4752,7 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
 .breadcrumb > li + li:before {
   padding: 0 5px;
   color: #ccc;
-  content: "/\00a0";
+  content: "\226b";
 }
 .breadcrumb > .active {
   color: #777;
@@ -8328,6 +8328,9 @@ a.tile {
   height: 24px;
   background-position: -20px -318px;
 }
+a .contenttype-folder {
+  font-family: "DGUVMetaWeb-Normal", sans-serif !important;
+}
 a.contenttype-folder.state-pending,
 a.contenttype-document.state-pending {
   color: #d39105;
@@ -8877,14 +8880,11 @@ article.vevent a.event_ical img {
   line-height: 1.5em;
 }
 .event.summary {
-  float: right;
-  max-width: 300px;
+  float: left!important;
+  max-width: 100%;
   padding: 12px 12px 12px 36px;
-  margin-left: 5px;
   font-weight: 400;
   background: #fafafa;
-  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
-          box-shadow: 0 1px 3px rgba(0, 0, 0, .17);
 }
 .event.summary strong,
 .event.summary li > span {
