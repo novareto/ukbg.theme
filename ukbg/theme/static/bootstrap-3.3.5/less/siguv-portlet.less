@@ -44,6 +44,17 @@
     .portletWrapper {margin-top:15px;}
 }
 
+// Mobile Static
+.portlet-right .portletMobileStaticText .portletContent li{
+	text-indent: 0px;
+}
+
+@media (min-width: 991px) {
+	.portlet-right .portletMobileStaticText{
+		display: none;
+	}
+}
+
 // Static
 .portletStaticText .callout {
     background: #eee;
@@ -66,6 +77,12 @@ a.event-more,
 .event-start,
 a.event-location {
         padding-left: 11px;
+}
+
+@media (max-width: 991px) {
+	.portletStaticText {
+		display: none;
+	}
 }
 
 //
