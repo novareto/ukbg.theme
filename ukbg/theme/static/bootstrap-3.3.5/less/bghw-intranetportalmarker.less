@@ -75,7 +75,7 @@ nav.portal-marker-head.smaller h1#logo {
 	color:white;
     }
     nav.portal-marker-head.smaller {
-        height: 50px;
+        height: 60px;
     }
     nav.portal-marker-head.smaller h1#logo {
         font-size: 18px;
@@ -106,4 +106,108 @@ nav.portal-marker-head.smaller h1#logo {
 		margin-top:-90px;
 	}
 }
- 
+// New Styles for the Servicebuttons in the portalmarker
+.portal-marker-head .dropdown-menu {
+	position: absolute;
+}
+.portal-marker-head .navbar-nav .open .dropdown-menu{
+	position: absolute;
+	background-color: white;
+	width: 250px;
+
+	li a:hover {
+		background-color:#f5f5f5;
+	}
+}
+.portalmarker-servicebutton-list {
+	list-style: none;
+	color: white;
+	margin-top: 5px;
+
+	li a img.portalmarker-servicebutton-icon {
+		float: left;
+		margin-right: 3px;
+		margin-bottom: 20px;
+	}
+	li a p.portalmarker-servicebutton-name {
+		-webkit-hyphens: auto;
+		-ms-hyphens: auto;
+		-moz-hyphens: auto;
+		hyphens: auto;
+		color: white;
+		text-decoration: none;
+	}
+	li.servicebutton-list-item a i.fa {
+		color: white;
+		border: 1px solid white;
+		padding: 5px;
+	}
+}
+// Styles for the Tablet and Mobile view of the Servicebuttons in the portalmarker
+ul.nav.navbar-nav.servicebutton-dropdown{
+	float: left;
+	max-width:350px;
+	display:none;
+
+	li a.servicebutton-dropdownlist-item {
+		color: white;
+	}
+	.servicebutton.dropdown-menu li {
+		margin: 20px 0;
+
+		a.servicebutton-config {
+			display: unset!important; 
+			margin-left:4px;
+		}
+	}
+	.servicebutton.dropdown-menu img {
+		display: block;
+		float: left;
+		margin-right: 10px;
+		width: 10%;
+	}
+}
+@media (max-width: 1783px){
+        .portalmarker-servicebutton-list {
+                font-size: 12px;
+                line-height: 14px;
+        }
+}
+@media (max-width: 1024px){
+        .servicebutton-desktop-list {
+                display: none;
+        }
+        ul.nav.navbar-nav.servicebutton-dropdown {
+                display:block;
+        }
+}
+@media (max-width: 991px){
+	.navbar-nav.admin {
+		float: right!important;
+	}
+}
+@media (max-width: 768px){
+	.navbar-nav.admin {
+		float: left!important;
+	}
+}
+@media (max-width: 503px){
+	.navbar-nav.admin {
+		margin-top: -10px;
+	}
+	nav.portal-marker-head {
+		height: 64px;
+	}
+}
+@media (max-width: 400px){
+	#portalmarker .nav > li {
+		margin-right: -20px;
+	}
+	nav.portal-marker-head.smaller .navbar-nav li.dropdown {
+		font-size: 12px;
+		
+		a {
+		  padding-bottom: 0px;
+		}
+	}
+} 
