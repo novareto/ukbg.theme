@@ -8462,7 +8462,7 @@ a.contenttype-document.state-private {
     padding-bottom: 10px;
   }
   #viewlet-below-content {
-    display: none;
+    display: block;
   }
   /*
     #side-menu {
@@ -8919,6 +8919,9 @@ article.vevent a.event_ical img {
   .praevdoc_contentbox .boxlink img {
     width: 60%;
   }
+}
+.master-slider img {
+  max-width: 107%!important;
 }
 #edit-zone nav > ul [class^="icon"] {
   font-size: 14px !important;
@@ -10079,6 +10082,84 @@ dl.portletLogin label {
 .eventDetails {
   margin: 10px 0;
   background: #f5f5f5;
+}
+.ploneCalendar {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.ploneCalendar thead {
+  padding: 10px;
+  margin: 0;
+  background-color: #004994!important;
+}
+.ploneCalendar thead tr th {
+  padding: 8px;
+  line-height: 1.42857143;
+  color: white;
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+.ploneCalendar tbody tr td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+.ploneCalendar tbody tr td.event {
+  color: #555;
+}
+.ploneCalendar tbody tr td.today {
+  background-color: #ddd;
+}
+.ploneCalendar tbody tr td.cal_has_event {
+  font-weight: 700;
+  color: #09c!important;
+}
+.ploneCalendar tbody tr td.cal_next_month {
+  opacity: .5;
+}
+.ploneCalendar tbody tr td.cal_prev_month {
+  opacity: .5;
+}
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+.table thead {
+  padding: 10px;
+  margin: 0;
+  background-color: #004994!important;
+}
+.table thead tr th {
+  padding: 8px;
+  line-height: 1.42857143;
+  color: white;
+  vertical-align: bottom;
+  border-bottom: 2px solid #ddd;
+}
+.table tbody tr td {
+  padding: 8px;
+  line-height: 1.42857143;
+  vertical-align: top;
+  border-top: 1px solid #ddd;
+}
+.table tbody tr td.event {
+  color: #555;
+}
+.table tbody tr td.today {
+  background-color: #ddd;
+}
+.table tbody tr td.cal_has_event {
+  font-weight: 700;
+  color: #09c!important;
+}
+.table tbody tr td.cal_next_month {
+  opacity: .5;
+}
+.table tbody tr td.cal_prev_month {
+  opacity: .5;
 }
 /* override the css toolbar.css for ploneFormGen QuickEdit*/
 .pfg-form label {
@@ -12153,6 +12234,7 @@ ul.nav.navbar-nav.servicebutton-dropdown .servicebutton.dropdown-menu img {
   #viewlet-below-content-body {
     display: none;
   }
+  .navbar-nav.navbar-right,
   .navbar-nav.admin,
   .navbar-nav.servicebutton-dropdown,
   .navbar-nav.servicebutton-dropdown li a {
