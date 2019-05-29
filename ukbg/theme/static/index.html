@@ -261,6 +261,38 @@
                 }
                 clickEvent = false;
             });
+if (window.matchMedia("(min-width: 992px)").matches) {
+  $(
+    "#edit-zone #plone-contentmenu-factories, #edit-zone #plone-contentmenu-workflow, #edit-zone #plone-contentmenu-actions, #edit-zone #plone-contentmenu-display, #edit-zone #plone-contentmenu-portletmanager"
+  ).click(function() {
+    $(this)
+      .siblings("li")
+      .removeClass("active");
+    $(this).toggleClass("active");
+    $(this)
+      .find(".label-")
+      .removeAttr("href");
+    $(this)
+      .find(".label-state-published")
+      .removeAttr("href");
+    $(this)
+      .children("ul")
+      .addClass("userList");
+  });
+  $(".plone-toolbar-logo").click(function() {
+    $("#global-wrapper").toggleClass("plone-toolbar-expanded");
+  });
+  $("#personal-bar-container").click(function() {
+    $(this)
+      .find("#portal-personaltools")
+      .toggleClass("active");
+    $("#portal-personaltools a")
+      .first()
+      .removeAttr("href");
+    var height = window.innerHeight - 160;
+    $("#portal-personaltools ul").css({ "margin-top": height + "px" });
+  });
+}
         });
     </script>
     <script src="assets/js/offcanvas.js"></script>
