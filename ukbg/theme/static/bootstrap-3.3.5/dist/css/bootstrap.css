@@ -12409,7 +12409,35 @@ p.intranet-announcement-content {
   border-left: 120px solid #004994;
   opacity: .5;
 }
-@media (max-width: 735px) {
+img.banner-image {
+  float: right;
+  width: 55%;
+}
+@media (max-width: 1200px) {
+  img.banner-image {
+    width: 45%;
+  }
+  .intranet-announcement-content-block.outer {
+    border-top: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #004994;
+  }
+  .intranet-announcement-content-block.middle {
+    border-top: 80px solid transparent;
+    border-bottom: 80px solid transparent;
+    border-left: 80px solid #004994;
+  }
+  .intranet-announcement-content-block.inner {
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid transparent;
+    border-left: 100px solid #004994;
+  }
+}
+@media (max-width: 991px) {
+  img.banner-image {
+    float: none;
+    width: 100%;
+  }
   .intranet-announcement-banner {
     max-height: 300px;
   }
