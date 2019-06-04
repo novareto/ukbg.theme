@@ -10083,43 +10083,44 @@ dl.portletLogin label {
   margin: 10px 0;
   background: #f5f5f5;
 }
-.ploneCalendar {
+.portletCalendar .ploneCalendar {
   width: 100%;
   max-width: 100%;
   margin-bottom: 20px;
+  background: white;
 }
-.ploneCalendar thead {
+.portletCalendar .ploneCalendar thead {
   padding: 10px;
   margin: 0;
   background-color: #004994!important;
 }
-.ploneCalendar thead tr th {
+.portletCalendar .ploneCalendar thead tr th {
   padding: 8px;
   line-height: 1.42857143;
   color: white;
   vertical-align: bottom;
   border-bottom: 2px solid #ddd;
 }
-.ploneCalendar tbody tr td {
+.portletCalendar .ploneCalendar tbody tr td {
   padding: 8px;
   line-height: 1.42857143;
   vertical-align: top;
   border-top: 1px solid #ddd;
 }
-.ploneCalendar tbody tr td.event {
+.portletCalendar .ploneCalendar tbody tr td.event {
   color: #555;
 }
-.ploneCalendar tbody tr td.today {
+.portletCalendar .ploneCalendar tbody tr td.today {
   background-color: #ddd;
 }
-.ploneCalendar tbody tr td.cal_has_event {
+.portletCalendar .ploneCalendar tbody tr td.cal_has_event {
   font-weight: 700;
   color: #09c!important;
 }
-.ploneCalendar tbody tr td.cal_next_month {
+.portletCalendar .ploneCalendar tbody tr td.cal_next_month {
   opacity: .5;
 }
-.ploneCalendar tbody tr td.cal_prev_month {
+.portletCalendar .ploneCalendar tbody tr td.cal_prev_month {
   opacity: .5;
 }
 .table {
