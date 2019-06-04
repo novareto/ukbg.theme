@@ -368,11 +368,13 @@ dl.portletLogin {
 
 //portlet calendar
 .portletCalendar {
-.ploneCalendar {
 	width: 100%;
 	max-width: 100%;
 	margin-bottom: 20px;
         background:white;
+	.ploneCalendar {
+		width:100%;
+	}
 	thead {
 		padding: 10px;
 		margin: 0;
@@ -410,48 +412,4 @@ dl.portletLogin {
 			opacity: 0.5;
 		}
 	}
-}
-}
-.table {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 20px;
-
-        thead {
-                padding: 10px;
-                margin: 0;
-                background-color: #004994!important;
-
-                tr th {
-                        padding: 8px;
-                        line-height: 1.42857143;
-                        border-bottom: 2px solid #ddd;
-                        vertical-align: bottom;
-                        color: white;
-                }
-        }
-        tbody tr td {
-                padding: 8px;
-                line-height: 1.42857143;
-                vertical-align: top;
-                border-top: 1px solid #ddd;
-        }
-        tbody tr {
-                td.event {
-                        color: #555;
-                }
-                td.today {
-                        background-color: #ddd;
-                }
-                td.cal_has_event {
-                        font-weight: 700;
-                        color: #09c!important;
-                }
-                td.cal_next_month {
-                        opacity: 0.5;
-                }
-                td.cal_prev_month {
-                        opacity: 0.5;
-                }
-        }
 }
