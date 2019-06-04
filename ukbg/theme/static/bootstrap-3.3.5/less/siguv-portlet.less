@@ -364,9 +364,6 @@ dl.portletLogin {
 .eventDetails {background:#f5f5f5;margin:10px 0;}
 
 //portlet calendar
-
-
-//portlet calendar
 .portletCalendar {
 	width: 100%;
 	max-width: 100%;
@@ -374,13 +371,17 @@ dl.portletLogin {
         background:white;
 	.ploneCalendar {
 		width:100%;
+	.event {
+		background-color:white;
 	}
-	thead {
+	.weekdays th {
+		background-color: #004994!important;
+	}
+	thead tr {
 		padding: 10px;
 		margin: 0;
-		background-color: #004994!important;
 	
-		tr th {
+		th {
 			padding: 8px;
 			line-height: 1.42857143;
 			border-bottom: 2px solid #ddd;
@@ -395,6 +396,7 @@ dl.portletLogin {
 		border-top: 1px solid #ddd;
 	}
 	tbody tr {
+		background: white;
 		td.event {
 			color: #555;
 		}
@@ -411,5 +413,6 @@ dl.portletLogin {
 		td.cal_prev_month {
 			opacity: 0.5;
 		}
+	}
 	}
 }
